@@ -1,10 +1,13 @@
 package com.fundingForAll.www.User;
 
+import com.fundingForAll.www.utils.EmailUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.io.IOException;
 import java.util.NoSuchElementException;
 import java.util.Optional;
+import java.util.UUID;
 
 @Service
 public class UserService {
@@ -50,7 +53,7 @@ public class UserService {
         userRepository.delete(user);
     }
 
-    // Authentication
+    // Duplicate check
     public boolean isIdPresent(String id) {
         Optional<User> findById = userRepository.findById(id);
 
@@ -70,5 +73,15 @@ public class UserService {
 
         boolean flag = (findByAccount.isPresent()) ? true : false;
         return flag;
+    }
+
+    // Authentication(userId_uuid 이런 형태로 세션에 저장하고 나중에 30초 뒤에 삭제하는 형태로 만들자)
+    public String sendMail(String receiverEmail) throws IOException {
+        String uuid = UUID.randomUUID().toString();
+
+        EmailUtil emailUtil = new EmailUtil();
+        emailUtil.sendEmail(receiverEmail, uuid);
+
+        return uuid;
     }
 }

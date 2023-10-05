@@ -6,15 +6,12 @@ import com.fundingForAll.www.User.User;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-import org.hibernate.annotations.Generated;
-import org.hibernate.annotations.GenericGenerator;
-import org.hibernate.annotations.IdGeneratorType;
 
 import java.sql.Timestamp;
 import java.util.List;
 
 @Entity
-@Getter @Setter
+@Getter
 public class Fund {
 
     @Id @Column(name = "FUND_ID")
@@ -34,11 +31,11 @@ public class Fund {
     @Column(name = "FUND_TARGET_MONEY")
     private int targetMoney;
 
+    @Column(name = "FUND_CURRENT_MONEY")
+    private int currentMoney;
+
     @Column(name = "FUND_VIEWS")
     private int views;
-
-    @Column(name = "FUND_RECOMMEND")
-    private int recommend;
 
     @ManyToOne
     @JoinColumn(name = "USER_ID")
@@ -55,4 +52,22 @@ public class Fund {
 
     @OneToOne(mappedBy = "fund")
     private Content music;
+
+    public Fund createFund(FundDto fundDto, User user) {
+        this.title = fundDto.getTitle();
+        this.content = fundDto.getContent();
+        this.targetMoney = fundDto.getTargetMoney();
+        this.currentMoney = 0;
+        this.views = 0;
+        this.user = user;
+
+        return this;
+    }
+
+    public Fund updateFund(FundDto fundDto) {
+        this.title = fundDto.getTitle();
+        this.content = fundDto.getContent();
+
+        return this;
+    }
 }

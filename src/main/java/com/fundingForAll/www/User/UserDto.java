@@ -7,6 +7,6 @@ public class UserDto {
     private String id;
     private String password;
     private String email;
-    private String phone;
-    private String account;
+    private String bankName;
+    private String bankAccount;
 }

@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.Optional;
 
 @Repository
-@Transactional
+@Transactional(readOnly = true)
 public class UserRepository {
     private EntityManager em;
     private JPAQueryFactory queryFactory;
@@ -17,26 +17,26 @@ public class UserRepository {
     @Autowired
     public UserRepository(EntityManager em) {
         this.em = em;
-        queryFactory = new JPAQueryFactory(em);
+        queryFactory = new JPAQueryFactory(this.em);
 
     }
 
+    @Transactional
     public String save(User user) {
         em.persist(user);
         return user.getId();
     }
 
+    @Transactional
     public void delete(User user) {
         em.remove(user);
     }
 
-    @Transactional(readOnly = true)
     public Optional<User> findById(String userId) {
         Optional<User> findUser = Optional.ofNullable(em.find(User.class, userId));
         return findUser;
     }
 
-    @Transactional(readOnly = true)
     public Optional<User> findByEmail(String email) {
         QUser qUser = QUser.user;
 
@@ -48,7 +48,6 @@ public class UserRepository {
         return Optional.ofNullable(findUser);
     }
 
-    @Transactional(readOnly = true)
     public Optional<User> findByAccount(String account) {
         QUser qUser = QUser.user;
 

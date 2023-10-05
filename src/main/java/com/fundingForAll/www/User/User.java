@@ -23,11 +23,11 @@ public class User {
     @Column(name = "USER_EMAIL")
     private String email;
 
-    @Column(name = "USER_PHONE")
-    private String phone;
-
-    @Column(name = "USER_ACCOUNT")
-    private String account;
+    @Column(name = "USER_BANK_NAME")
+    private String bankName;
+    
+    @Column(name = "USER_BANK_bankAccount")
+    private String bankAccount;
 
     @OneToMany(mappedBy = "user")
     private List<Donate> donateList;
@@ -40,17 +40,14 @@ public class User {
         this.id = userDto.getId();
         this.password = userDto.getPassword();
         this.email = userDto.getEmail();
-        this.phone = userDto.getPhone();
-        this.account = userDto.getAccount();
-
+        this.bankAccount = userDto.getBankAccount();
         return this;
     }
 
     public User updateUser(UserDto userDto) {
         this.password = userDto.getPassword();
         this.email = userDto.getEmail();
-        this.phone = userDto.getPhone();
-        this.account = userDto.getAccount();
+        this.bankAccount = userDto.getBankAccount();
 
         return this;
     }
