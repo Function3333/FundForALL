@@ -1,25 +1,16 @@
 package com.fundingForAll.www.Content;
 
-import com.fundingForAll.www.Fund.Fund;
-import com.fundingForAll.www.User.User;
 import jakarta.persistence.*;
 import lombok.Getter;
-import lombok.Setter;
-
-import java.util.UUID;
 
 @Entity
-@Getter @Setter
-public class Content {
+@Getter
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "DTYPE")
+public abstract class Content {
 
-    @Id @GeneratedValue(strategy = GenerationType.UUID)
+    @Id
     @Column(name = "CONTENT_ID")
-    private UUID id;
-
-    @OneToOne(mappedBy = "content")
-    private User user;
-
-    @ManyToOne
-    @JoinColumn(name = "CONTENT_FUND_ID")
-    private Fund fund;
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private String id;
 }

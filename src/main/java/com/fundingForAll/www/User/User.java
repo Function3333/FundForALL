@@ -2,6 +2,7 @@ package com.fundingForAll.www.User;
 
 
 import com.fundingForAll.www.Content.Content;
+import com.fundingForAll.www.Content.Image;
 import com.fundingForAll.www.Donate.Donate;
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -10,7 +11,7 @@ import lombok.Setter;
 import java.util.List;
 
 @Entity
-@Getter
+@Getter @Setter
 public class User {
 
     @Id
@@ -32,9 +33,8 @@ public class User {
     @OneToMany(mappedBy = "user")
     private List<Donate> donateList;
 
-    @OneToOne
-    @JoinColumn(name = "USER_CONTENT_ID")
-    private Content content;
+    @OneToOne(mappedBy = "user")
+    private Image userImg;
 
     public User createUser(UserDto userDto) {
         this.id = userDto.getId();

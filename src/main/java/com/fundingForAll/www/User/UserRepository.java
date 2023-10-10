@@ -54,7 +54,7 @@ public class UserRepository {
         User findUser = queryFactory
                 .select(qUser)
                 .from(qUser)
-                .where(qUser.account.eq(account))
+                .where(qUser.bankAccount.eq(account))
                 .fetchFirst();
 
         return Optional.ofNullable(findUser);
