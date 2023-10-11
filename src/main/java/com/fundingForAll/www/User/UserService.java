@@ -3,13 +3,14 @@ package com.fundingForAll.www.User;
 import com.fundingForAll.www.utils.EmailUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.io.IOException;
-import java.util.NoSuchElementException;
 import java.util.Optional;
 import java.util.UUID;
 
 @Service
+@Transactional(readOnly = true)
 public class UserService {
     private UserRepository userRepository;
 
@@ -20,35 +21,33 @@ public class UserService {
 
 
     // CRUD
-    public String createUser(UserDto userDto) {
-        User user = new User().createUser(userDto);
-        String userId = userRepository.save(user);
+    @Transactional
+    public User save(UserForm userForm) {
+        User user = new User().formToEntity(userForm);
 
-        return userId;
+        return userRepository.save(user);
     }
 
     public User getUser(String userId) {
-        try {
-            User findUser = userRepository.findById(userId).get();
+        Optional<User> findUser = userRepository.findById(userId);
 
-            return findUser;
-        } catch (NoSuchElementException e) {
-            throw  e;
-        }
+        return (findUser.isPresent()) ? findUser.get() : null;
     }
 
-    public String updateUser(UserDto userDto) {
-        try {
-            User findUser = userRepository.findById(userDto.getId()).get();
-            findUser.updateUser(userDto);
+    @Transactional
+    public User updateUser(String userId, UserForm userForm) {
+        Optional<User> findUser = userRepository.findById(userId);
 
-            String userId = userRepository.save(findUser);
-            return userId;
-        } catch (NoSuchElementException e) {
-            throw  e;
+        if(findUser.isPresent()) {
+            User user = findUser.get();
+            user.updateUser(userForm);
+
+            return user;
         }
+        return null;
     }
 
+    @Transactional
     public void deleteUser(User user) {
         userRepository.delete(user);
     }

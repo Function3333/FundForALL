@@ -36,19 +36,22 @@ public class User {
     @OneToOne(mappedBy = "user")
     private Image userImg;
 
-    public User createUser(UserDto userDto) {
-        this.id = userDto.getId();
-        this.password = userDto.getPassword();
-        this.email = userDto.getEmail();
-        this.bankAccount = userDto.getBankAccount();
+    public User formToEntity(UserForm userForm) {
+        this.id = userForm.getUserId();
+        this.password = userForm.getPassword();
+        this.email = userForm.getEmail();
+        this.bankName = userForm.getBankName();
+        this.bankAccount = userForm.getBankAccount();
+        this.userImg = userForm.getUserImg();
+
         return this;
     }
 
-    public User updateUser(UserDto userDto) {
-        this.password = userDto.getPassword();
-        this.email = userDto.getEmail();
-        this.bankAccount = userDto.getBankAccount();
-
-        return this;
+    public void updateUser(UserForm userForm) {
+        this.password = userForm.getPassword();
+        this.email = userForm.getEmail();
+        this.bankName = userForm.getBankName();
+        this.bankAccount = userForm.getBankAccount();
+        this.userImg = userForm.getUserImg();
     }
 }

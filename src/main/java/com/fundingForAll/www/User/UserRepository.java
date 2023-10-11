@@ -9,7 +9,6 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.Optional;
 
 @Repository
-@Transactional(readOnly = true)
 public class UserRepository {
     private EntityManager em;
     private JPAQueryFactory queryFactory;
@@ -21,13 +20,11 @@ public class UserRepository {
 
     }
 
-    @Transactional
-    public String save(User user) {
+    public User save(User user) {
         em.persist(user);
-        return user.getId();
+        return user;
     }
 
-    @Transactional
     public void delete(User user) {
         em.remove(user);
     }

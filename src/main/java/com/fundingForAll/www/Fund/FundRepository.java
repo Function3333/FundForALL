@@ -19,7 +19,6 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-@Transactional(readOnly = true)
 public class FundRepository {
     private EntityManager em;
     private JPAQueryFactory queryFactory;
@@ -30,29 +29,19 @@ public class FundRepository {
         this.queryFactory = new JPAQueryFactory(this.em);
     }
 
-    @Transactional
     public int save(Fund fund) {
         em.persist(fund);
-
         return fund.getFundNo();
     }
 
-    @Transactional
     public void delete(Fund fund) {
         em.remove(fund);
-    }
-
-    public Optional<Fund> findByNo(int fundNo) {
-        Optional<Fund> findFund = Optional.ofNullable(em.find(Fund.class, fundNo));
-        return findFund;
     }
 
     public Optional<Fund> findById(int fundNo) {
         return Optional.ofNullable(em.find(Fund.class, fundNo));
     }
 
-
-    //search
     public List<Fund> getFundList(Search search) {
         QFund qFund = QFund.fund;
         QContent qContent = QContent.content;
@@ -99,8 +88,7 @@ public class FundRepository {
         return switch (sortType) {
             case VIEWS -> new OrderSpecifier(Order.DESC, qFund.views);
             case REG_DATE -> new OrderSpecifier(Order.DESC, qFund.regDate);
-            case NONE -> new OrderSpecifier(Order.ASC, NullExpression.DEFAULT, OrderSpecifier.NullHandling.Default);
+            default -> new OrderSpecifier(Order.ASC, NullExpression.DEFAULT, OrderSpecifier.NullHandling.Default);
         };
     }
-
 }

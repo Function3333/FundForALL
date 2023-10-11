@@ -60,21 +60,31 @@ public class Fund {
     @OneToOne(mappedBy = "fund")
     private Music music;
 
-    public Fund createFund(FundDto fundDto, User user) {
-        this.title = fundDto.getTitle();
-        this.content = fundDto.getContent();
-        this.targetMoney = fundDto.getTargetMoney();
-        this.currentMoney = 0;
-        this.views = 0;
-        this.user = user;
+    public Fund formToEntity(FundForm fundForm) {
+        this.title = fundForm.getTitle();
+        this.content = fundForm.getContent();
+        this.targetMoney = fundForm.getTargetMoney();
+        this.user = fundForm.getUser();
+        this.imgList = fundForm.getImageList();
+        this.videoList = fundForm.getVideoList();
+        this.music = fundForm.getMusic();
 
         return this;
     }
 
-    /*public Fund updateFund(FundDto fundDto) {
-        this.title = fundDto.getTitle();
-        this.content = fundDto.getContent();
+    public void updateFund(FundForm fundForm) {
+        this.title = fundForm.getTitle();
+        this.content = fundForm.getContent();
+        this.imgList = fundForm.getImageList();
+        this.videoList = fundForm.getVideoList();
+        this.music = fundForm.getMusic();
+    }
 
-        return this;
-    }*/
+    public void increaseView() {
+        this.views++;
+    }
+
+    public void increaseCurrentMoney(int inputMoney) {
+        this.currentMoney += inputMoney;
+    }
 }

@@ -3,7 +3,8 @@ package com.fundingForAll.www.utils;
 public enum SortType {
     REG_DATE(1),
     VIEWS(2),
-    NONE(3);
+    MONEY(3),
+    NONE(4);
 
     private final int value;
 
