@@ -1,9 +1,9 @@
 package com.fundingForAll.www.serviceTest;
 
 
-import com.fundingForAll.www.User.User;
-import com.fundingForAll.www.User.UserForm;
-import com.fundingForAll.www.User.UserService;
+import com.fundingForAll.www.user.User;
+import com.fundingForAll.www.user.UserForm;
+import com.fundingForAll.www.user.UserService;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

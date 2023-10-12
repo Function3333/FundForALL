@@ -1,11 +1,11 @@
-package com.fundingForAll.www.Fund;
+package com.fundingForAll.www.fund;
 
-import com.fundingForAll.www.Content.Content;
-import com.fundingForAll.www.Content.Image;
-import com.fundingForAll.www.Content.Music;
-import com.fundingForAll.www.Content.Video;
-import com.fundingForAll.www.Donate.Donate;
-import com.fundingForAll.www.User.User;
+import com.fundingForAll.www.comment.Comment;
+import com.fundingForAll.www.content.Image;
+import com.fundingForAll.www.content.Music;
+import com.fundingForAll.www.content.Video;
+import com.fundingForAll.www.donate.Donate;
+import com.fundingForAll.www.user.User;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -17,7 +17,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@ToString
 @Getter @Setter
 public class Fund {
 
@@ -44,9 +43,12 @@ public class Fund {
     @Column(name = "FUND_VIEWS")
     private int views;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "USER_ID")
     private User user;
+
+    @OneToMany(mappedBy = "fund")
+    private List<Comment> commentList = new ArrayList<>();
 
     @OneToMany(mappedBy = "fund")
     private List<Donate> donateList = new ArrayList<>();

@@ -1,4 +1,4 @@
-package com.fundingForAll.www.User;
+package com.fundingForAll.www.user;
 
 import com.fundingForAll.www.utils.EmailUtil;
 import org.springframework.beans.factory.annotation.Autowired;

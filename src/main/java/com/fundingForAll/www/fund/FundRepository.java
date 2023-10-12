@@ -1,7 +1,9 @@
-package com.fundingForAll.www.Fund;
+package com.fundingForAll.www.fund;
 
 
-import com.fundingForAll.www.Content.QContent;
+
+import com.fundingForAll.www.content.QContent;
+import com.fundingForAll.www.fund.QFund;
 import com.fundingForAll.www.utils.Search;
 import com.fundingForAll.www.utils.SearchType;
 import com.fundingForAll.www.utils.SortType;
@@ -13,7 +15,6 @@ import com.querydsl.jpa.impl.JPAQueryFactory;
 import jakarta.persistence.EntityManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -29,9 +30,9 @@ public class FundRepository {
         this.queryFactory = new JPAQueryFactory(this.em);
     }
 
-    public int save(Fund fund) {
+    public Fund save(Fund fund) {
         em.persist(fund);
-        return fund.getFundNo();
+        return fund;
     }
 
     public void delete(Fund fund) {

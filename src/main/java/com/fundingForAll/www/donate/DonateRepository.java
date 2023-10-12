@@ -1,10 +1,10 @@
-package com.fundingForAll.www.Donate;
+package com.fundingForAll.www.donate;
 
+import com.fundingForAll.www.donate.QDonate;
 import com.fundingForAll.www.utils.SortType;
 import com.querydsl.core.types.NullExpression;
 import com.querydsl.core.types.Order;
 import com.querydsl.core.types.OrderSpecifier;
-import com.querydsl.core.types.dsl.BooleanExpression;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import jakarta.persistence.EntityManager;
 import org.springframework.beans.factory.annotation.Autowired;

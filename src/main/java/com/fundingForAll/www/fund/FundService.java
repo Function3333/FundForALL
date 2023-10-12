@@ -1,4 +1,4 @@
-package com.fundingForAll.www.Fund;
+package com.fundingForAll.www.fund;
 
 import com.fundingForAll.www.utils.Search;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,9 +20,11 @@ public class FundService {
     }
 
     @Transactional
-    public int save(Fund fund) {
-        int fundId = fundRepository.save(fund);
-        return fundId;
+    public Fund save(FundForm fundForm) {
+        Fund fund = new Fund().formToEntity(fundForm);
+        fundRepository.save(fund);
+
+        return fund;
     }
 
     @Transactional

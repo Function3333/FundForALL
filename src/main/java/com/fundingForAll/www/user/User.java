@@ -1,9 +1,8 @@
-package com.fundingForAll.www.User;
+package com.fundingForAll.www.user;
 
 
-import com.fundingForAll.www.Content.Content;
-import com.fundingForAll.www.Content.Image;
-import com.fundingForAll.www.Donate.Donate;
+import com.fundingForAll.www.content.Image;
+import com.fundingForAll.www.donate.Donate;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;

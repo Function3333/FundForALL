@@ -1,4 +1,4 @@
-package com.fundingForAll.www.Content;
+package com.fundingForAll.www.content;
 
 import jakarta.persistence.*;
 import lombok.Getter;

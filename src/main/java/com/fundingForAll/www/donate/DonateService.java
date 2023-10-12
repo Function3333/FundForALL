@@ -1,4 +1,4 @@
-package com.fundingForAll.www.Donate;
+package com.fundingForAll.www.donate;
 
 import com.fundingForAll.www.utils.SortType;
 import org.springframework.beans.factory.annotation.Autowired;

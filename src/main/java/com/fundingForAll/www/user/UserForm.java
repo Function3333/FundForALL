@@ -1,6 +1,6 @@
-package com.fundingForAll.www.User;
+package com.fundingForAll.www.user;
 
-import com.fundingForAll.www.Content.Image;
+import com.fundingForAll.www.content.Image;
 import lombok.Data;
 import org.springframework.web.multipart.MultipartFile;
 

@@ -1,8 +1,8 @@
 package com.fundingForAll.www.repositoryTest;
 
 
-import com.fundingForAll.www.Fund.Fund;
-import com.fundingForAll.www.Fund.FundRepository;
+import com.fundingForAll.www.fund.Fund;
+import com.fundingForAll.www.fund.FundRepository;
 import com.fundingForAll.www.utils.Search;
 import com.fundingForAll.www.utils.SearchType;
 import com.fundingForAll.www.utils.SortType;

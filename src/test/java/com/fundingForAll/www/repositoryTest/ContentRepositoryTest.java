@@ -1,8 +1,8 @@
 package com.fundingForAll.www.repositoryTest;
 
-import com.fundingForAll.www.Content.Content;
-import com.fundingForAll.www.Content.ContentRepository;
-import com.fundingForAll.www.Content.Image;
+import com.fundingForAll.www.content.Content;
+import com.fundingForAll.www.content.ContentRepository;
+import com.fundingForAll.www.content.Image;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

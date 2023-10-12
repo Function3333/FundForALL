@@ -1,7 +1,7 @@
-package com.fundingForAll.www.Donate;
+package com.fundingForAll.www.donate;
 
-import com.fundingForAll.www.Fund.Fund;
-import com.fundingForAll.www.User.User;
+import com.fundingForAll.www.fund.Fund;
+import com.fundingForAll.www.user.User;
 import lombok.Data;
 
 @Data

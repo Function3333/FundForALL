@@ -1,9 +1,9 @@
-package com.fundingForAll.www.Fund;
+package com.fundingForAll.www.fund;
 
-import com.fundingForAll.www.Content.Image;
-import com.fundingForAll.www.Content.Music;
-import com.fundingForAll.www.Content.Video;
-import com.fundingForAll.www.User.User;
+import com.fundingForAll.www.content.Image;
+import com.fundingForAll.www.content.Music;
+import com.fundingForAll.www.content.Video;
+import com.fundingForAll.www.user.User;
 import lombok.Data;
 import org.springframework.web.multipart.MultipartFile;
 

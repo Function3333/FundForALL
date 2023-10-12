@@ -1,7 +1,7 @@
-package com.fundingForAll.www.Donate;
+package com.fundingForAll.www.donate;
 
-import com.fundingForAll.www.Fund.Fund;
-import com.fundingForAll.www.User.User;
+import com.fundingForAll.www.fund.Fund;
+import com.fundingForAll.www.user.User;
 import jakarta.persistence.*;
 import org.hibernate.annotations.CreationTimestamp;
 
@@ -14,12 +14,12 @@ public class Donate {
     @Column(name = "DONATE_ID")
     private int id;
 
-    @ManyToOne
-    @JoinColumn(name = "DONATE_USER_ID")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "USER_ID")
     private User user;
 
-    @ManyToOne
-    @JoinColumn(name = "DONATE_FUND_ID")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "FUND_ID")
     private Fund fund;
 
     @Column(name = "DONATE_MONEY")

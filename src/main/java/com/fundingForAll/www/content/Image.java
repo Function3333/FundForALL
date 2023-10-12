@@ -1,7 +1,7 @@
-package com.fundingForAll.www.Content;
+package com.fundingForAll.www.content;
 
-import com.fundingForAll.www.Fund.Fund;
-import com.fundingForAll.www.User.User;
+import com.fundingForAll.www.fund.Fund;
+import com.fundingForAll.www.user.User;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -12,11 +12,11 @@ import lombok.NoArgsConstructor;
 @DiscriminatorValue("I")
 public class Image extends Content{
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "IMAGE_FUND_ID")
     private Fund fund;
 
-    @OneToOne
+    @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "IMAGE_USER_ID")
     private User user;
 
