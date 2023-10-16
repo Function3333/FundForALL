@@ -49,7 +49,7 @@ public class ContentRepository {
         return Optional.ofNullable(content);
     }
 
-    public String findImageByUserId(String userId) {
+    public Optional<String> findImageByUserId(String userId) {
         QImage qImage = QImage.image;
 
         String imgId = queryFactory
@@ -58,7 +58,7 @@ public class ContentRepository {
                 .where(qImage.user.id.eq(userId))
                 .fetchOne();
 
-        return imgId;
+        return Optional.ofNullable(imgId);
     }
 
     public List<String> findImageByFundId(int fundId) {
