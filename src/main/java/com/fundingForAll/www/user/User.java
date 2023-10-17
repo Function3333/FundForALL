@@ -9,6 +9,7 @@ import lombok.Setter;
 
 import java.util.List;
 
+/*후원 랭킹을 위해 후원금액 필드 추가하자*/
 @Entity
 @Getter @Setter
 public class User {

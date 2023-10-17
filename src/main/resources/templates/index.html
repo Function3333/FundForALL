@@ -1,12 +1,21 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charSet="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>카카오같이가치</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Import CSS-->
+    <link rel="stylesheet" href="assets/css/mainStyle.css">
+    <link rel="stylesheet" href="assets/css/modalStyle.css">
+
+    <!-- Import Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 </head>
 <body>
+
+
 <header id="navigation" class="sc-7d9cc060-0 jUHOXU navigation ">
     <div class="sc-7d9cc060-1 kQXNVt">
         <h1 class="sc-6c591950-0 gcVIDZ">
@@ -34,6 +43,15 @@
                 </li>
             </ul>
         </nav>
+        <div class="sc-8aebc68d-0 ddTVtd undefined sc-eedf5289-0 kFkUlr" aria-label="유틸메뉴">
+            <div class="sc-8aeb359-0 hFOIQn sc-8aebc68d-1 eTFbhS">
+                <a draggable="false"  class="sc-7924a6a8-0 hLSWWl external_hyperlink sc-8aebc68d-4 dksFvB" data-bs-toggle="modal" data-bs-target="#donate/donateModal">
+                    <div class="sc-988ad92b-0 cCFuWc sc-8aebc68d-2 dUktTI">
+                        <img src="//t1.kakaocdn.net/together_image/common/avatar/avatar.png" alt="" class="sc-8213ab33-0 bliNZt"/>
+                    </div>
+                </a>
+            </div>
+        </div>
         <a href="https://together.kakao.com/search" aria-label="검색" class="sc-7d9cc060-2 cQTNwZ">
             <div aria-hidden="true">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40 40" width="20" height="20" opacity="1" class="sc-62ee9b1b-0 fVkbrr sc-7d9cc060-3 gBeISY">
@@ -65,6 +83,7 @@
         </section>
         <div class="sc-8aeb359-0 hFOIQn sc-d6ea244d-0 jlKRwE">
             <section class="sc-8aeb359-0 hFOIQn sc-89adf84f-0 sc-53ee9573-0 hUjAiC cZRNdS">
+
                 <div class="sc-8aeb359-0 hFOIQn">
                     <h4 class="sc-695c2ba5-0 WfZZU">기부 리스트</h4>
                     <div class="sc-8aeb359-0 hFOIQn sc-e3e47cd7-6 ilnzBQ">
@@ -94,469 +113,25 @@
                     </div>
                 </div>
 
-
-                <div class="sc-8aeb359-0 hFOIQn">
-                    <div class="sc-8aeb359-0 hFOIQn sc-e3e47cd7-6 sc-9a905158-0 ilnzBQ iKrvgK">
-                        <div class="sc-dc52c688-0 doyorn">
-                            <div class="slider-container" style="position:relative">
-                                <div aria-live="off" aria-atomic="true" style="position:absolute;width:1px;height:1px;overflow:hidden;padding:0;margin:-1px;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" tabindex="-1">Slide 1 of 3</div>
-                                <div style="align-items:flex-end;justify-content:flex-end;position:absolute;display:flex;z-index:1;top:0;left:0;bottom:0;right:0;pointer-events:none">
-                                    <div class="slider-control-bottomright" style="pointer-events:auto">
-                                        <div class="sc-dc52c688-1 ghsjdq">
-                                            <strong class="sc-695c2ba5-0 WfZZU">슬라이드</strong>
-                                            1
-                                            <!-- -->
-                                            /
-                                            <!-- -->
-                                            3
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="slider-frame" style="overflow:hidden;width:100%;position:relative;outline:none;touch-action:pan-y;height:auto;transition:height 300ms ease-in-out;will-change:height;user-select:none" aria-label="#모두의행동 슬라이드" role="region" tabindex="-1">
-                                    <div class="slider-list" style="width:900%;text-align:left;user-select:auto;transform:translateX(calc(-33.333333333333336% - 0px));display:flex">
-                                        <div class="slide slide-current prev-cloned slide-visible" style="width:11.11111111111111%;height:auto;padding:0 0px;opacity:1">
-                                            <div class="sc-e3e47cd7-0 cenffs content_card sc-450ebeba-2 jLCJVQ">
-                                                <div class="sc-e3e47cd7-1 esmiGv card_inner" aria-label="카카오톡 그린 사용 설명서 카카오 그린 사용 설명서를 실천하고 건강한 디지털 습관을 가져볼까요? #모두의행동, 3,784명 행동중">
-                                                    <div src="https://t1.kakaocdn.net/together_action_prod/admin/20230524/f3f763631bbc48288935c06ad6520e61?type=thumb&amp;opt=S500x500" class="sc-e3e47cd7-2 jQPJJw thumbnail"></div>
-                                                    <div class="sc-e3e47cd7-3 dHFjfg card_content">
-                                                        <strong color="black" class="sc-5dc55ca7-0 sc-e3e47cd7-4 bDRHrZ ijTmKa card_title" aria-hidden="true">카카오톡 그린 사용 설명서</strong>
-                                                        <span color="gray60" class="sc-5dc55ca7-0 sc-e3e47cd7-5 jSqJeI gEAlPn card_subtext" aria-hidden="true">카카오 그린 사용 설명서를 실천하고 건강한 디지털 습관을 가져볼까요?</span>
-                                                        <button type="button" class="sc-e7c24948-0 cTHyIF button sc-820435de-1 dZwWNP sc-450ebeba-0 jRqTOn" aria-hidden="true" name="모두의행동">
-                                                            <span color="gray60" class="sc-8aeb359-0 fkhoFx sc-5dc55ca7-0 QMpcT">#</span>
-                                                            <span color="gray60" class="sc-5dc55ca7-0 sc-820435de-2 qPkKe bzPozR">모두의행동</span>
-                                                        </button>
-                                                        <em type="rect" color="black" class="sc-5dc55ca7-0 sc-9c33d6bc-2 fdXCPn kUyXql label sc-450ebeba-1 gBznAp rect_type" aria-hidden="true">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28 28" width="14" height="14" opacity="1" class="sc-62ee9b1b-0 hEia-DX">
-                                                                <g fill="none" fill-rule="evenodd">
-                                                                    <path d="m15.414.566 2.934 2.933L22.5 3.5a2 2 0 0 1 2 2v4.15l2.934 2.936a2 2 0 0 1 0 2.828L24.5 18.35 24.5 22.5a2 2 0 0 1-2 2h-4.15l-2.936 2.934a2 2 0 0 1-2.828 0L9.65 24.5 5.5 24.5a2 2 0 0 1-2-2v-4.152L.565 15.414a2 2 0 0 1 0-2.828L3.499 9.65 3.5 5.5a2 2 0 0 1 2-2h4.151L12.586.565a2 2 0 0 1 2.828 0z" fill="#ad4cfe"></path>
-                                                                    <path d="M18.02 9.62a1 1 0 0 1 1.677 1.082l-.068.106-6.066 8.21a1 1 0 0 1-1.443.175l-.09-.085-3.506-3.73a1 1 0 0 1 1.366-1.456l.091.086 2.685 2.857 5.354-7.246z" fill="#fff" fill-rule="nonzero"></path>
-                                                                </g>
-                                                            </svg>
-                                                            3,784
-                                                            <!-- -->
-                                                            명 행동중
-                                                        </em>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="slide prev-cloned slide-visible" style="width:11.11111111111111%;height:auto;padding:0 0px;opacity:1">
-                                            <div class="sc-e3e47cd7-0 cenffs content_card sc-450ebeba-2 jLCJVQ">
-                                                <div class="sc-e3e47cd7-1 esmiGv card_inner" aria-label="이메일로 시작하는
-그린 디지털 실천! 불필요하게 쌓여있는 메일함을 정리하고 일상 속 디지털 다이어트를 실천해 볼까요? #모두의행동, 2,954명 행동중">
-                                                    <div src="https://t1.kakaocdn.net/together_action_prod/admin/20230522/3e46a68ee3504a2f8132688e8772f732?type=thumb&amp;opt=S500x500" class="sc-e3e47cd7-2 btpQpr thumbnail"></div>
-                                                    <div class="sc-e3e47cd7-3 dHFjfg card_content">
-                                                        <strong color="black" class="sc-5dc55ca7-0 sc-e3e47cd7-4 bDRHrZ ijTmKa card_title" aria-hidden="true">이메일로 시작하는
-                                                            그린 디지털 실천!</strong>
-                                                        <span color="gray60" class="sc-5dc55ca7-0 sc-e3e47cd7-5 jSqJeI gEAlPn card_subtext" aria-hidden="true">불필요하게 쌓여있는 메일함을 정리하고 일상 속 디지털 다이어트를 실천해 볼까요?</span>
-                                                        <button type="button" class="sc-e7c24948-0 cTHyIF button sc-820435de-1 dZwWNP sc-450ebeba-0 jRqTOn" aria-hidden="true" name="모두의행동">
-                                                            <span color="gray60" class="sc-8aeb359-0 fkhoFx sc-5dc55ca7-0 QMpcT">#</span>
-                                                            <span color="gray60" class="sc-5dc55ca7-0 sc-820435de-2 qPkKe bzPozR">모두의행동</span>
-                                                        </button>
-                                                        <em type="rect" color="black" class="sc-5dc55ca7-0 sc-9c33d6bc-2 fdXCPn kUyXql label sc-450ebeba-1 gBznAp rect_type" aria-hidden="true">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28 28" width="14" height="14" opacity="1" class="sc-62ee9b1b-0 hEia-DX">
-                                                                <g fill="none" fill-rule="evenodd">
-                                                                    <path d="m15.414.566 2.934 2.933L22.5 3.5a2 2 0 0 1 2 2v4.15l2.934 2.936a2 2 0 0 1 0 2.828L24.5 18.35 24.5 22.5a2 2 0 0 1-2 2h-4.15l-2.936 2.934a2 2 0 0 1-2.828 0L9.65 24.5 5.5 24.5a2 2 0 0 1-2-2v-4.152L.565 15.414a2 2 0 0 1 0-2.828L3.499 9.65 3.5 5.5a2 2 0 0 1 2-2h4.151L12.586.565a2 2 0 0 1 2.828 0z" fill="#ad4cfe"></path>
-                                                                    <path d="M18.02 9.62a1 1 0 0 1 1.677 1.082l-.068.106-6.066 8.21a1 1 0 0 1-1.443.175l-.09-.085-3.506-3.73a1 1 0 0 1 1.366-1.456l.091.086 2.685 2.857 5.354-7.246z" fill="#fff" fill-rule="nonzero"></path>
-                                                                </g>
-                                                            </svg>
-                                                            2,954
-                                                            <!-- -->
-                                                            명 행동중
-                                                        </em>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="slide prev-cloned slide-visible" style="width:11.11111111111111%;height:auto;padding:0 0px;opacity:1">
-                                            <div class="sc-e3e47cd7-0 cenffs content_card sc-450ebeba-2 jLCJVQ">
-                                                <div class="sc-e3e47cd7-1 esmiGv card_inner" aria-label="자전거로 시작하는
-기후 위기 대응 자전거로 지구를 지키는 건강한 실천 시작해 볼까요? #모두의행동, 1,112명 행동중">
-                                                    <div src="https://t1.kakaocdn.net/together_action_prod/admin/20230522/7250ec37e77744a2b917456ddf55392a?type=thumb&amp;opt=S500x500" class="sc-e3e47cd7-2 jvsmOg thumbnail"></div>
-                                                    <div class="sc-e3e47cd7-3 dHFjfg card_content">
-                                                        <strong color="black" class="sc-5dc55ca7-0 sc-e3e47cd7-4 bDRHrZ ijTmKa card_title" aria-hidden="true">자전거로 시작하는
-                                                            기후 위기 대응</strong>
-                                                        <span color="gray60" class="sc-5dc55ca7-0 sc-e3e47cd7-5 jSqJeI gEAlPn card_subtext" aria-hidden="true">자전거로 지구를 지키는 건강한 실천 시작해 볼까요?</span>
-                                                        <button type="button" class="sc-e7c24948-0 cTHyIF button sc-820435de-1 dZwWNP sc-450ebeba-0 jRqTOn" aria-hidden="true" name="모두의행동">
-                                                            <span color="gray60" class="sc-8aeb359-0 fkhoFx sc-5dc55ca7-0 QMpcT">#</span>
-                                                            <span color="gray60" class="sc-5dc55ca7-0 sc-820435de-2 qPkKe bzPozR">모두의행동</span>
-                                                        </button>
-                                                        <em type="rect" color="black" class="sc-5dc55ca7-0 sc-9c33d6bc-2 fdXCPn kUyXql label sc-450ebeba-1 gBznAp rect_type" aria-hidden="true">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28 28" width="14" height="14" opacity="1" class="sc-62ee9b1b-0 hEia-DX">
-                                                                <g fill="none" fill-rule="evenodd">
-                                                                    <path d="m15.414.566 2.934 2.933L22.5 3.5a2 2 0 0 1 2 2v4.15l2.934 2.936a2 2 0 0 1 0 2.828L24.5 18.35 24.5 22.5a2 2 0 0 1-2 2h-4.15l-2.936 2.934a2 2 0 0 1-2.828 0L9.65 24.5 5.5 24.5a2 2 0 0 1-2-2v-4.152L.565 15.414a2 2 0 0 1 0-2.828L3.499 9.65 3.5 5.5a2 2 0 0 1 2-2h4.151L12.586.565a2 2 0 0 1 2.828 0z" fill="#ad4cfe"></path>
-                                                                    <path d="M18.02 9.62a1 1 0 0 1 1.677 1.082l-.068.106-6.066 8.21a1 1 0 0 1-1.443.175l-.09-.085-3.506-3.73a1 1 0 0 1 1.366-1.456l.091.086 2.685 2.857 5.354-7.246z" fill="#fff" fill-rule="nonzero"></path>
-                                                                </g>
-                                                            </svg>
-                                                            1,112
-                                                            <!-- -->
-                                                            명 행동중
-                                                        </em>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="slide slide-current slide-visible" style="width:11.11111111111111%;height:auto;padding:0 0px;opacity:1">
-                                            <div class="sc-e3e47cd7-0 cenffs content_card sc-450ebeba-2 jLCJVQ">
-                                                <div class="sc-e3e47cd7-1 esmiGv card_inner" aria-label="카카오톡 그린 사용 설명서 카카오 그린 사용 설명서를 실천하고 건강한 디지털 습관을 가져볼까요? #모두의행동, 3,784명 행동중">
-                                                    <div src="https://t1.kakaocdn.net/together_action_prod/admin/20230524/f3f763631bbc48288935c06ad6520e61?type=thumb&amp;opt=S500x500" class="sc-e3e47cd7-2 jQPJJw thumbnail"></div>
-                                                    <div class="sc-e3e47cd7-3 dHFjfg card_content">
-                                                        <strong color="black" class="sc-5dc55ca7-0 sc-e3e47cd7-4 bDRHrZ ijTmKa card_title" aria-hidden="true">카카오톡 그린 사용 설명서</strong>
-                                                        <span color="gray60" class="sc-5dc55ca7-0 sc-e3e47cd7-5 jSqJeI gEAlPn card_subtext" aria-hidden="true">카카오 그린 사용 설명서를 실천하고 건강한 디지털 습관을 가져볼까요?</span>
-                                                        <button type="button" class="sc-e7c24948-0 cTHyIF button sc-820435de-1 dZwWNP sc-450ebeba-0 jRqTOn" aria-hidden="true" name="모두의행동">
-                                                            <span color="gray60" class="sc-8aeb359-0 fkhoFx sc-5dc55ca7-0 QMpcT">#</span>
-                                                            <span color="gray60" class="sc-5dc55ca7-0 sc-820435de-2 qPkKe bzPozR">모두의행동</span>
-                                                        </button>
-                                                        <em type="rect" color="black" class="sc-5dc55ca7-0 sc-9c33d6bc-2 fdXCPn kUyXql label sc-450ebeba-1 gBznAp rect_type" aria-hidden="true">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28 28" width="14" height="14" opacity="1" class="sc-62ee9b1b-0 hEia-DX">
-                                                                <g fill="none" fill-rule="evenodd">
-                                                                    <path d="m15.414.566 2.934 2.933L22.5 3.5a2 2 0 0 1 2 2v4.15l2.934 2.936a2 2 0 0 1 0 2.828L24.5 18.35 24.5 22.5a2 2 0 0 1-2 2h-4.15l-2.936 2.934a2 2 0 0 1-2.828 0L9.65 24.5 5.5 24.5a2 2 0 0 1-2-2v-4.152L.565 15.414a2 2 0 0 1 0-2.828L3.499 9.65 3.5 5.5a2 2 0 0 1 2-2h4.151L12.586.565a2 2 0 0 1 2.828 0z" fill="#ad4cfe"></path>
-                                                                    <path d="M18.02 9.62a1 1 0 0 1 1.677 1.082l-.068.106-6.066 8.21a1 1 0 0 1-1.443.175l-.09-.085-3.506-3.73a1 1 0 0 1 1.366-1.456l.091.086 2.685 2.857 5.354-7.246z" fill="#fff" fill-rule="nonzero"></path>
-                                                                </g>
-                                                            </svg>
-                                                            3,784
-                                                            <!-- -->
-                                                            명 행동중
-                                                        </em>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="slide slide-visible" style="width:11.11111111111111%;height:auto;padding:0 0px;opacity:1">
-                                            <div class="sc-e3e47cd7-0 cenffs content_card sc-450ebeba-2 jLCJVQ">
-                                                <div class="sc-e3e47cd7-1 esmiGv card_inner" aria-label="이메일로 시작하는
-그린 디지털 실천! 불필요하게 쌓여있는 메일함을 정리하고 일상 속 디지털 다이어트를 실천해 볼까요? #모두의행동, 2,954명 행동중">
-                                                    <div src="https://t1.kakaocdn.net/together_action_prod/admin/20230522/3e46a68ee3504a2f8132688e8772f732?type=thumb&amp;opt=S500x500" class="sc-e3e47cd7-2 btpQpr thumbnail"></div>
-                                                    <div class="sc-e3e47cd7-3 dHFjfg card_content">
-                                                        <strong color="black" class="sc-5dc55ca7-0 sc-e3e47cd7-4 bDRHrZ ijTmKa card_title" aria-hidden="true">이메일로 시작하는
-                                                            그린 디지털 실천!</strong>
-                                                        <span color="gray60" class="sc-5dc55ca7-0 sc-e3e47cd7-5 jSqJeI gEAlPn card_subtext" aria-hidden="true">불필요하게 쌓여있는 메일함을 정리하고 일상 속 디지털 다이어트를 실천해 볼까요?</span>
-                                                        <button type="button" class="sc-e7c24948-0 cTHyIF button sc-820435de-1 dZwWNP sc-450ebeba-0 jRqTOn" aria-hidden="true" name="모두의행동">
-                                                            <span color="gray60" class="sc-8aeb359-0 fkhoFx sc-5dc55ca7-0 QMpcT">#</span>
-                                                            <span color="gray60" class="sc-5dc55ca7-0 sc-820435de-2 qPkKe bzPozR">모두의행동</span>
-                                                        </button>
-                                                        <em type="rect" color="black" class="sc-5dc55ca7-0 sc-9c33d6bc-2 fdXCPn kUyXql label sc-450ebeba-1 gBznAp rect_type" aria-hidden="true">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28 28" width="14" height="14" opacity="1" class="sc-62ee9b1b-0 hEia-DX">
-                                                                <g fill="none" fill-rule="evenodd">
-                                                                    <path d="m15.414.566 2.934 2.933L22.5 3.5a2 2 0 0 1 2 2v4.15l2.934 2.936a2 2 0 0 1 0 2.828L24.5 18.35 24.5 22.5a2 2 0 0 1-2 2h-4.15l-2.936 2.934a2 2 0 0 1-2.828 0L9.65 24.5 5.5 24.5a2 2 0 0 1-2-2v-4.152L.565 15.414a2 2 0 0 1 0-2.828L3.499 9.65 3.5 5.5a2 2 0 0 1 2-2h4.151L12.586.565a2 2 0 0 1 2.828 0z" fill="#ad4cfe"></path>
-                                                                    <path d="M18.02 9.62a1 1 0 0 1 1.677 1.082l-.068.106-6.066 8.21a1 1 0 0 1-1.443.175l-.09-.085-3.506-3.73a1 1 0 0 1 1.366-1.456l.091.086 2.685 2.857 5.354-7.246z" fill="#fff" fill-rule="nonzero"></path>
-                                                                </g>
-                                                            </svg>
-                                                            2,954
-                                                            <!-- -->
-                                                            명 행동중
-                                                        </em>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="slide slide-visible" style="width:11.11111111111111%;height:auto;padding:0 0px;opacity:1">
-                                            <div class="sc-e3e47cd7-0 cenffs content_card sc-450ebeba-2 jLCJVQ">
-                                                <div class="sc-e3e47cd7-1 esmiGv card_inner" aria-label="자전거로 시작하는
-기후 위기 대응 자전거로 지구를 지키는 건강한 실천 시작해 볼까요? #모두의행동, 1,112명 행동중">
-                                                    <div src="https://t1.kakaocdn.net/together_action_prod/admin/20230522/7250ec37e77744a2b917456ddf55392a?type=thumb&amp;opt=S500x500" class="sc-e3e47cd7-2 jvsmOg thumbnail"></div>
-                                                    <div class="sc-e3e47cd7-3 dHFjfg card_content">
-                                                        <strong color="black" class="sc-5dc55ca7-0 sc-e3e47cd7-4 bDRHrZ ijTmKa card_title" aria-hidden="true">자전거로 시작하는
-                                                            기후 위기 대응</strong>
-                                                        <span color="gray60" class="sc-5dc55ca7-0 sc-e3e47cd7-5 jSqJeI gEAlPn card_subtext" aria-hidden="true">자전거로 지구를 지키는 건강한 실천 시작해 볼까요?</span>
-                                                        <button type="button" class="sc-e7c24948-0 cTHyIF button sc-820435de-1 dZwWNP sc-450ebeba-0 jRqTOn" aria-hidden="true" name="모두의행동">
-                                                            <span color="gray60" class="sc-8aeb359-0 fkhoFx sc-5dc55ca7-0 QMpcT">#</span>
-                                                            <span color="gray60" class="sc-5dc55ca7-0 sc-820435de-2 qPkKe bzPozR">모두의행동</span>
-                                                        </button>
-                                                        <em type="rect" color="black" class="sc-5dc55ca7-0 sc-9c33d6bc-2 fdXCPn kUyXql label sc-450ebeba-1 gBznAp rect_type" aria-hidden="true">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28 28" width="14" height="14" opacity="1" class="sc-62ee9b1b-0 hEia-DX">
-                                                                <g fill="none" fill-rule="evenodd">
-                                                                    <path d="m15.414.566 2.934 2.933L22.5 3.5a2 2 0 0 1 2 2v4.15l2.934 2.936a2 2 0 0 1 0 2.828L24.5 18.35 24.5 22.5a2 2 0 0 1-2 2h-4.15l-2.936 2.934a2 2 0 0 1-2.828 0L9.65 24.5 5.5 24.5a2 2 0 0 1-2-2v-4.152L.565 15.414a2 2 0 0 1 0-2.828L3.499 9.65 3.5 5.5a2 2 0 0 1 2-2h4.151L12.586.565a2 2 0 0 1 2.828 0z" fill="#ad4cfe"></path>
-                                                                    <path d="M18.02 9.62a1 1 0 0 1 1.677 1.082l-.068.106-6.066 8.21a1 1 0 0 1-1.443.175l-.09-.085-3.506-3.73a1 1 0 0 1 1.366-1.456l.091.086 2.685 2.857 5.354-7.246z" fill="#fff" fill-rule="nonzero"></path>
-                                                                </g>
-                                                            </svg>
-                                                            1,112
-                                                            <!-- -->
-                                                            명 행동중
-                                                        </em>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="slide slide-current next-cloned slide-visible" style="width:11.11111111111111%;height:auto;padding:0 0px;opacity:1">
-                                            <div class="sc-e3e47cd7-0 cenffs content_card sc-450ebeba-2 jLCJVQ">
-                                                <div class="sc-e3e47cd7-1 esmiGv card_inner" aria-label="카카오톡 그린 사용 설명서 카카오 그린 사용 설명서를 실천하고 건강한 디지털 습관을 가져볼까요? #모두의행동, 3,784명 행동중">
-                                                    <div src="https://t1.kakaocdn.net/together_action_prod/admin/20230524/f3f763631bbc48288935c06ad6520e61?type=thumb&amp;opt=S500x500" class="sc-e3e47cd7-2 jQPJJw thumbnail"></div>
-                                                    <div class="sc-e3e47cd7-3 dHFjfg card_content">
-                                                        <strong color="black" class="sc-5dc55ca7-0 sc-e3e47cd7-4 bDRHrZ ijTmKa card_title" aria-hidden="true">카카오톡 그린 사용 설명서</strong>
-                                                        <span color="gray60" class="sc-5dc55ca7-0 sc-e3e47cd7-5 jSqJeI gEAlPn card_subtext" aria-hidden="true">카카오 그린 사용 설명서를 실천하고 건강한 디지털 습관을 가져볼까요?</span>
-                                                        <button type="button" class="sc-e7c24948-0 cTHyIF button sc-820435de-1 dZwWNP sc-450ebeba-0 jRqTOn" aria-hidden="true" name="모두의행동">
-                                                            <span color="gray60" class="sc-8aeb359-0 fkhoFx sc-5dc55ca7-0 QMpcT">#</span>
-                                                            <span color="gray60" class="sc-5dc55ca7-0 sc-820435de-2 qPkKe bzPozR">모두의행동</span>
-                                                        </button>
-                                                        <em type="rect" color="black" class="sc-5dc55ca7-0 sc-9c33d6bc-2 fdXCPn kUyXql label sc-450ebeba-1 gBznAp rect_type" aria-hidden="true">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28 28" width="14" height="14" opacity="1" class="sc-62ee9b1b-0 hEia-DX">
-                                                                <g fill="none" fill-rule="evenodd">
-                                                                    <path d="m15.414.566 2.934 2.933L22.5 3.5a2 2 0 0 1 2 2v4.15l2.934 2.936a2 2 0 0 1 0 2.828L24.5 18.35 24.5 22.5a2 2 0 0 1-2 2h-4.15l-2.936 2.934a2 2 0 0 1-2.828 0L9.65 24.5 5.5 24.5a2 2 0 0 1-2-2v-4.152L.565 15.414a2 2 0 0 1 0-2.828L3.499 9.65 3.5 5.5a2 2 0 0 1 2-2h4.151L12.586.565a2 2 0 0 1 2.828 0z" fill="#ad4cfe"></path>
-                                                                    <path d="M18.02 9.62a1 1 0 0 1 1.677 1.082l-.068.106-6.066 8.21a1 1 0 0 1-1.443.175l-.09-.085-3.506-3.73a1 1 0 0 1 1.366-1.456l.091.086 2.685 2.857 5.354-7.246z" fill="#fff" fill-rule="nonzero"></path>
-                                                                </g>
-                                                            </svg>
-                                                            3,784
-                                                            <!-- -->
-                                                            명 행동중
-                                                        </em>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="slide next-cloned slide-visible" style="width:11.11111111111111%;height:auto;padding:0 0px;opacity:1">
-                                            <div class="sc-e3e47cd7-0 cenffs content_card sc-450ebeba-2 jLCJVQ">
-                                                <div class="sc-e3e47cd7-1 esmiGv card_inner" aria-label="이메일로 시작하는
-그린 디지털 실천! 불필요하게 쌓여있는 메일함을 정리하고 일상 속 디지털 다이어트를 실천해 볼까요? #모두의행동, 2,954명 행동중">
-                                                    <div src="https://t1.kakaocdn.net/together_action_prod/admin/20230522/3e46a68ee3504a2f8132688e8772f732?type=thumb&amp;opt=S500x500" class="sc-e3e47cd7-2 btpQpr thumbnail"></div>
-                                                    <div class="sc-e3e47cd7-3 dHFjfg card_content">
-                                                        <strong color="black" class="sc-5dc55ca7-0 sc-e3e47cd7-4 bDRHrZ ijTmKa card_title" aria-hidden="true">이메일로 시작하는
-                                                            그린 디지털 실천!</strong>
-                                                        <span color="gray60" class="sc-5dc55ca7-0 sc-e3e47cd7-5 jSqJeI gEAlPn card_subtext" aria-hidden="true">불필요하게 쌓여있는 메일함을 정리하고 일상 속 디지털 다이어트를 실천해 볼까요?</span>
-                                                        <button type="button" class="sc-e7c24948-0 cTHyIF button sc-820435de-1 dZwWNP sc-450ebeba-0 jRqTOn" aria-hidden="true" name="모두의행동">
-                                                            <span color="gray60" class="sc-8aeb359-0 fkhoFx sc-5dc55ca7-0 QMpcT">#</span>
-                                                            <span color="gray60" class="sc-5dc55ca7-0 sc-820435de-2 qPkKe bzPozR">모두의행동</span>
-                                                        </button>
-                                                        <em type="rect" color="black" class="sc-5dc55ca7-0 sc-9c33d6bc-2 fdXCPn kUyXql label sc-450ebeba-1 gBznAp rect_type" aria-hidden="true">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28 28" width="14" height="14" opacity="1" class="sc-62ee9b1b-0 hEia-DX">
-                                                                <g fill="none" fill-rule="evenodd">
-                                                                    <path d="m15.414.566 2.934 2.933L22.5 3.5a2 2 0 0 1 2 2v4.15l2.934 2.936a2 2 0 0 1 0 2.828L24.5 18.35 24.5 22.5a2 2 0 0 1-2 2h-4.15l-2.936 2.934a2 2 0 0 1-2.828 0L9.65 24.5 5.5 24.5a2 2 0 0 1-2-2v-4.152L.565 15.414a2 2 0 0 1 0-2.828L3.499 9.65 3.5 5.5a2 2 0 0 1 2-2h4.151L12.586.565a2 2 0 0 1 2.828 0z" fill="#ad4cfe"></path>
-                                                                    <path d="M18.02 9.62a1 1 0 0 1 1.677 1.082l-.068.106-6.066 8.21a1 1 0 0 1-1.443.175l-.09-.085-3.506-3.73a1 1 0 0 1 1.366-1.456l.091.086 2.685 2.857 5.354-7.246z" fill="#fff" fill-rule="nonzero"></path>
-                                                                </g>
-                                                            </svg>
-                                                            2,954
-                                                            <!-- -->
-                                                            명 행동중
-                                                        </em>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="slide next-cloned slide-visible" style="width:11.11111111111111%;height:auto;padding:0 0px;opacity:1">
-                                            <div class="sc-e3e47cd7-0 cenffs content_card sc-450ebeba-2 jLCJVQ">
-                                                <div class="sc-e3e47cd7-1 esmiGv card_inner" aria-label="자전거로 시작하는
-기후 위기 대응 자전거로 지구를 지키는 건강한 실천 시작해 볼까요? #모두의행동, 1,112명 행동중">
-                                                    <div src="https://t1.kakaocdn.net/together_action_prod/admin/20230522/7250ec37e77744a2b917456ddf55392a?type=thumb&amp;opt=S500x500" class="sc-e3e47cd7-2 jvsmOg thumbnail"></div>
-                                                    <div class="sc-e3e47cd7-3 dHFjfg card_content">
-                                                        <strong color="black" class="sc-5dc55ca7-0 sc-e3e47cd7-4 bDRHrZ ijTmKa card_title" aria-hidden="true">자전거로 시작하는
-                                                            기후 위기 대응</strong>
-                                                        <span color="gray60" class="sc-5dc55ca7-0 sc-e3e47cd7-5 jSqJeI gEAlPn card_subtext" aria-hidden="true">자전거로 지구를 지키는 건강한 실천 시작해 볼까요?</span>
-                                                        <button type="button" class="sc-e7c24948-0 cTHyIF button sc-820435de-1 dZwWNP sc-450ebeba-0 jRqTOn" aria-hidden="true" name="모두의행동">
-                                                            <span color="gray60" class="sc-8aeb359-0 fkhoFx sc-5dc55ca7-0 QMpcT">#</span>
-                                                            <span color="gray60" class="sc-5dc55ca7-0 sc-820435de-2 qPkKe bzPozR">모두의행동</span>
-                                                        </button>
-                                                        <em type="rect" color="black" class="sc-5dc55ca7-0 sc-9c33d6bc-2 fdXCPn kUyXql label sc-450ebeba-1 gBznAp rect_type" aria-hidden="true">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28 28" width="14" height="14" opacity="1" class="sc-62ee9b1b-0 hEia-DX">
-                                                                <g fill="none" fill-rule="evenodd">
-                                                                    <path d="m15.414.566 2.934 2.933L22.5 3.5a2 2 0 0 1 2 2v4.15l2.934 2.936a2 2 0 0 1 0 2.828L24.5 18.35 24.5 22.5a2 2 0 0 1-2 2h-4.15l-2.936 2.934a2 2 0 0 1-2.828 0L9.65 24.5 5.5 24.5a2 2 0 0 1-2-2v-4.152L.565 15.414a2 2 0 0 1 0-2.828L3.499 9.65 3.5 5.5a2 2 0 0 1 2-2h4.151L12.586.565a2 2 0 0 1 2.828 0z" fill="#ad4cfe"></path>
-                                                                    <path d="M18.02 9.62a1 1 0 0 1 1.677 1.082l-.068.106-6.066 8.21a1 1 0 0 1-1.443.175l-.09-.085-3.506-3.73a1 1 0 0 1 1.366-1.456l.091.086 2.685 2.857 5.354-7.246z" fill="#fff" fill-rule="nonzero"></path>
-                                                                </g>
-                                                            </svg>
-                                                            1,112
-                                                            <!-- -->
-                                                            명 행동중
-                                                        </em>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
                 <div class="sc-8aeb359-0 hFOIQn">
                     <h4 class="sc-695c2ba5-0 WfZZU">기부 리스트</h4>
                     <div class="sc-8aeb359-0 hFOIQn sc-e3e47cd7-6 ilnzBQ">
                         <div class="sc-e3e47cd7-0 cenffs content_card sc-fbd9f46f-0 fOMYOR">
-                            <a class="sc-e3e47cd7-1 fcWMWm card_inner" aria-label="생애 첫 여행을 떠납니다! 그대! 우리의 강릉여행 동료가 되어주세요! 재가 장애인을 아시나요? 재가 장애인이란 신체적 장애로 인한 외부활동의 제약으로 일상생활 대부분의 시간을 집에 머물며 살아가는 장애인을 뜻합니다. 재가 장애인분들은 일 년에 한 번 떠나는 휴가를 야외에서 즐기기 어려운 것이 현실입니다.   하지만 우리가 그들의 발이 되어준다면 강릉에서 푸른 바다와 상쾌한 공기... #더나은사회, 1,152,400원 모금중, 4,500,000원 목표" href="https://together.kakao.com/fundraisings/110261/story">
-                                <div src="https://mud-kage.kakaocdn.net/dn/B0n0i/btstlKojwXU/oYNlwWbjeScgOGjgtgC041/c360.jpg" class="sc-e3e47cd7-2 iiJjQn thumbnail"></div>
+                            <a class="sc-e3e47cd7-1 fcWMWm card_inner" href="#">
+
+                                <div src="#image" class="sc-e3e47cd7-2 cAjBAy thumbnail"></div>
                                 <div class="sc-e3e47cd7-3 dHFjfg card_content">
-                                    <strong color="black" class="sc-5dc55ca7-0 sc-e3e47cd7-4 bDRHrZ ijTmKa card_title" aria-hidden="true">생애 첫 여행을 떠납니다!</strong>
-                                    <span color="gray60" class="sc-5dc55ca7-0 sc-e3e47cd7-5 jSqJeI gEAlPn card_subtext" aria-hidden="true">그대! 우리의 강릉여행 동료가 되어주세요! 재가 장애인을 아시나요? 재가 장애인이란 신체적 장애로 인한 외부활동의 제약으로 일상생활 대부분의 시간을 집에 머물며 살아가는 장애인을 뜻합니다. 재가 장애인분들은 일 년에 한 번 떠나는 휴가를 야외에서 즐기기 어려운 것이 현실입니다.   하지만 우리가 그들의 발이 되어준다면 강릉에서 푸른 바다와 상쾌한 공기...</span>
-                                    <div class="sc-8aeb359-0 hmkyus sc-a4735020-0 gAeinx progress_container">
-                                        <div width="100%" class="sc-a723563c-0 eNhTsl progress_bar " aria-hidden="true">
-                                            <div role="progressbar" aria-valuenow="26" aria-valuemin="0" aria-valuemax="4500000" class="sc-a723563c-1 fxmMMD current_progress_bar"></div>
-                                        </div>
-                                        <div class="sc-8aeb359-0 bVzSkM sc-a4735020-1 cXseVP progress_info">
-                                                    <span color="black" class="sc-8aeb359-0 hFOIQn sc-5dc55ca7-0 lfuBQu txt_num txt_current">1,152,400
-                                                        <!-- -->
-                                                    원</span>
-                                            <span color="#ff4050" class="sc-8aeb359-0 hFOIQn sc-5dc55ca7-0 jnITAx txt_num">26
-                                                <!-- -->
-                                                    %</span>
-                                        </div>
-                                    </div>
-                                    <button type="button" color="black" class="sc-e7c24948-0 igxFUF button sc-820435de-1 dZwWNP sc-fbd9f46f-1 kiMXGf" name="더나은사회">
-                                        <span color="white" class="sc-8aeb359-0 fkhoFx sc-5dc55ca7-0 jxJJbH">#</span>
-                                        <span color="white" class="sc-5dc55ca7-0 sc-820435de-2 caqIee bzPozR">더나은사회</span>
-                                    </button>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="sc-e3e47cd7-0 cenffs content_card sc-fbd9f46f-0 fOMYOR">
-                            <a class="sc-e3e47cd7-1 fcWMWm card_inner" aria-label="&#x27;음악&#x27;으로 소통하고 해소해요 우리는 최중증 장애인입니다. 저희 와우리장애인주간보호센터는 최중증 발달장애인을 대상으로 낮 동안 보호와 다양한 재활 프로그램 서비스를 제공하는 장애인복지시설입니다. 저희 기관 모든 이용인은 언어 발달이 충분하지 않아 자신의 의사와 감정 표현을 하는 데 어려움을 보입니다. 때문에 대부분의 이용인은 교사와 소통하거나 자신의 감성을 온전히 전달하기에 한계가... #모두의교육, 325,000원 모금중, 2,000,000원 목표" href="https://together.kakao.com/fundraisings/110052/story">
-                                <div src="https://mud-kage.kakaocdn.net/dn/cjMmEp/btstk4mjzrd/2DqpCM4dU5FT0PCyfZKPLK/c360.jpg" class="sc-e3e47cd7-2 dBttOp thumbnail"></div>
-                                <div class="sc-e3e47cd7-3 dHFjfg card_content">
-                                    <strong color="black" class="sc-5dc55ca7-0 sc-e3e47cd7-4 bDRHrZ ijTmKa card_title" aria-hidden="true">&#x27;음악 &#x27;으로 소통하고 해소해요</strong>
-                                    <span color="gray60" class="sc-5dc55ca7-0 sc-e3e47cd7-5 jSqJeI gEAlPn card_subtext" aria-hidden="true">우리는 최중증 장애인입니다. 저희 와우리장애인주간보호센터는 최중증 발달장애인을 대상으로 낮 동안 보호와 다양한 재활 프로그램 서비스를 제공하는 장애인복지시설입니다. 저희 기관 모든 이용인은 언어 발달이 충분하지 않아 자신의 의사와 감정 표현을 하는 데 어려움을 보입니다. 때문에 대부분의 이용인은 교사와 소통하거나 자신의 감성을 온전히 전달하기에 한계가...</span>
-                                    <div class="sc-8aeb359-0 hmkyus sc-a4735020-0 gAeinx progress_container">
-                                        <div width="100%" class="sc-a723563c-0 eNhTsl progress_bar " aria-hidden="true">
-                                            <div role="progressbar" aria-valuenow="17" aria-valuemin="0" aria-valuemax="2000000" class="sc-a723563c-1 fBWeHJ current_progress_bar"></div>
-                                        </div>
-                                        <div class="sc-8aeb359-0 bVzSkM sc-a4735020-1 cXseVP progress_info">
-                                                    <span color="black" class="sc-8aeb359-0 hFOIQn sc-5dc55ca7-0 lfuBQu txt_num txt_current">325,000
-                                                        <!-- -->
-                                                    원</span>
-                                            <span color="#ff4050" class="sc-8aeb359-0 hFOIQn sc-5dc55ca7-0 jnITAx txt_num">17
-                                                <!-- -->
-                                                    %</span>
-                                        </div>
-                                    </div>
-                                    <button type="button" color="black" class="sc-e7c24948-0 igxFUF button sc-820435de-1 dZwWNP sc-fbd9f46f-1 kiMXGf" name="모두의교육">
-                                        <span color="white" class="sc-8aeb359-0 fkhoFx sc-5dc55ca7-0 jxJJbH">#</span>
-                                        <span color="white" class="sc-5dc55ca7-0 sc-820435de-2 caqIee bzPozR">모두의교육</span>
-                                    </button>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="sc-e3e47cd7-0 cenffs content_card sc-fbd9f46f-0 fOMYOR">
-                            <a class="sc-e3e47cd7-1 fcWMWm card_inner" aria-label="제3회 경남퀴어문화축제, 무지개로 물들여라 퀘어망제에서 퀴어축제까지 2019년, 경남퀴어문화축제의 출발에서 가장 먼저 마주한 단어는 ‘퀘어망제’였습니다. 혐오는 드셌고, 주변의 우려 또한 짙어졌습니다. 넘을 수 없을 것 같던 방해물들을 딛고 제1회 경남퀴어문화축제는 창원광장 남측 도로에서 개최되었습니다.  우리는 축제 현장에서 있는 그대로의 우리를, 사랑받아 마땅한 우리를, 우리의 존재 그 자... #더나은사회, 694,690원 모금중, 2,870,000원 목표" href="https://together.kakao.com/fundraisings/110479/story">
-                                <div src="https://mud-kage.kakaocdn.net/dn/d6eU02/btsudPCCZhA/U8AclKhlS2gJzoKke7lYu1/c360.jpg" class="sc-e3e47cd7-2 kkBoBk thumbnail"></div>
-                                <div class="sc-e3e47cd7-3 dHFjfg card_content">
-                                    <strong color="black" class="sc-5dc55ca7-0 sc-e3e47cd7-4 bDRHrZ ijTmKa card_title" aria-hidden="true">제3회 경남퀴어문화축제, 무지개로 물들여라</strong>
-                                    <span color="gray60" class="sc-5dc55ca7-0 sc-e3e47cd7-5 jSqJeI gEAlPn card_subtext" aria-hidden="true">퀘어망제에서 퀴어축제까지 2019년, 경남퀴어문화축제의 출발에서 가장 먼저 마주한 단어는 ‘퀘어망제’였습니다. 혐오는 드셌고, 주변의 우려 또한 짙어졌습니다. 넘을 수 없을 것 같던 방해물들을 딛고 제1회 경남퀴어문화축제는 창원광장 남측 도로에서 개최되었습니다.  우리는 축제 현장에서 있는 그대로의 우리를, 사랑받아 마땅한 우리를, 우리의 존재 그 자...</span>
-                                    <div class="sc-8aeb359-0 hmkyus sc-a4735020-0 gAeinx progress_container">
-                                        <div width="100%" class="sc-a723563c-0 eNhTsl progress_bar " aria-hidden="true">
-                                            <div role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="2870000" class="sc-a723563c-1 gOKXUU current_progress_bar"></div>
-                                        </div>
-                                        <div class="sc-8aeb359-0 bVzSkM sc-a4735020-1 cXseVP progress_info">
-                                                    <span color="black" class="sc-8aeb359-0 hFOIQn sc-5dc55ca7-0 lfuBQu txt_num txt_current">694,690
-                                                        <!-- -->
-                                                    원</span>
-                                            <span color="#ff4050" class="sc-8aeb359-0 hFOIQn sc-5dc55ca7-0 jnITAx txt_num">25
-                                                <!-- -->
-                                                    %</span>
-                                        </div>
-                                    </div>
-                                    <button type="button" color="black" class="sc-e7c24948-0 igxFUF button sc-820435de-1 dZwWNP sc-fbd9f46f-1 kiMXGf" name="더나은사회">
-                                        <span color="white" class="sc-8aeb359-0 fkhoFx sc-5dc55ca7-0 jxJJbH">#</span>
-                                        <span color="white" class="sc-5dc55ca7-0 sc-820435de-2 caqIee bzPozR">더나은사회</span>
-                                    </button>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="sc-8aeb359-0 kXvcZa sc-a50a523e-0 iRZdJc">
-                    <h4 class="sc-8aeb359-0 hFOIQn">
-                        <a draggable="false" class="sc-7924a6a8-0 hLSWWl external_hyperlink " aria-label="응원과 댓글도 기부가 되는 가장 쉬운 기부 ❤️" href="https://together.kakao.com/fundraisings/now">
-                            <div aria-hidden="true">
-                                <span size="13" class="sc-8aeb359-0 hFOIQn sc-5dc55ca7-0 sc-a50a523e-1 eiumwp eQwVxL">응원과 댓글도 기부가 되는</span>
-                                <em size="20" color="white" class="sc-8aeb359-0 ebtdVp sc-5dc55ca7-0 sc-a50a523e-2 kILfJh AmyIA">가장 쉬운 기부 ❤️</em>
-                            </div>
-                        </a>
-                    </h4>
-                    <div role="tablist" class="sc-9a993f3d-1 eSRefY">
-                        <button id="totalTab1" class="sc-9a993f3d-0 eTRRoh tab_button active " role="tab" aria-selected="true" aria-controls="totalTabPanel1">#
-                            <!-- -->
-                            EBS나눔0700</button>
-                        <button id="totalTab2" class="sc-9a993f3d-0 ioTTLA tab_button  " role="tab" aria-selected="false" aria-controls="totalTabPanel2">#
-                            <!-- -->
-                            실버세대</button>
-                        <button id="totalTab3" class="sc-9a993f3d-0 ioTTLA tab_button  " role="tab" aria-selected="false" aria-controls="totalTabPanel3">#
-                            <!-- -->
-                            식사지원</button>
-                        <button id="totalTab4" class="sc-9a993f3d-0 ioTTLA tab_button  " role="tab" aria-selected="false" aria-controls="totalTabPanel4">#
-                            <!-- -->
-                            어려운이웃</button>
-                    </div>
-                    <div id="totalTabPanel1" class="tab_panel " role="tabpanel" aria-labelledby="totalTab1">
-                        <div class="sc-e3e47cd7-0 cenffs content_card ">
-                            <a class="sc-e3e47cd7-1 fcWMWm card_inner" aria-label="우리 푸름이를 위해서라도! EBS나눔0700 위원회 1,426,700원 모금중" href="https://together.kakao.com/fundraisings/110830">
-                                <div src="https://mud-kage.kakaocdn.net/dn/cBtzXL/btsvP9eBxSr/TSOYf0ap1ednPfWqCWMK10/c1400x960.jpg" class="sc-e3e47cd7-2 hDyAzq thumbnail"></div>
-                                <div class="sc-e3e47cd7-3 dHFjfg card_content">
-                                    <strong color="black" class="sc-5dc55ca7-0 sc-e3e47cd7-4 bDRHrZ ijTmKa card_title" aria-hidden="true">우리 푸름이를 위해서라도!</strong>
-                                    <span color="gray60" class="sc-5dc55ca7-0 sc-e3e47cd7-5 jSqJeI gEAlPn card_subtext" aria-hidden="true">EBS나눔0700 위원회</span>
-                                    <div class="sc-8aeb359-0 hmkyus sc-a4735020-0 gAeinx progress_container">
-                                        <div width="100%" class="sc-a723563c-0 eNhTsl progress_bar " aria-hidden="true">
-                                            <div role="progressbar" aria-valuenow="18" aria-valuemin="0" aria-valuemax="8000000" class="sc-a723563c-1 crcRXu current_progress_bar"></div>
-                                        </div>
-                                        <div class="sc-8aeb359-0 bVzSkM sc-a4735020-1 cXseVP progress_info">
-                                                    <span color="black" class="sc-8aeb359-0 hFOIQn sc-5dc55ca7-0 lfuBQu txt_num txt_current">1,426,700
-                                                        <!-- -->
-                                                    원</span>
-                                            <span color="#ff4050" class="sc-8aeb359-0 hFOIQn sc-5dc55ca7-0 jnITAx txt_num">18
-                                                <!-- -->
-                                                    %</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="sc-e3e47cd7-0 cenffs content_card ">
-                            <a class="sc-e3e47cd7-1 fcWMWm card_inner" aria-label="어느 부부의 보이지 않는 사랑 EBS나눔0700 위원회 3,038,207원 모금중" href="https://together.kakao.com/fundraisings/110689">
-                                <div src="https://mud-kage.kakaocdn.net/dn/DAdh9/btsu0p3OfYf/b83grj1dJ6zWkGRSv9fayK/c1400x960.jpg" class="sc-e3e47cd7-2 cAjBAy thumbnail"></div>
-                                <div class="sc-e3e47cd7-3 dHFjfg card_content">
-                                    <strong color="black" class="sc-5dc55ca7-0 sc-e3e47cd7-4 bDRHrZ ijTmKa card_title" aria-hidden="true">어느 부부의 보이지 않는 사랑</strong>
-                                    <span color="gray60" class="sc-5dc55ca7-0 sc-e3e47cd7-5 jSqJeI gEAlPn card_subtext" aria-hidden="true">EBS나눔0700 위원회</span>
+                                    <strong color="black" class="sc-5dc55ca7-0 sc-e3e47cd7-4 bDRHrZ ijTmKa card_title" aria-hidden="true">title</strong>
+                                    <span color="gray60" class="sc-5dc55ca7-0 sc-e3e47cd7-5 jSqJeI gEAlPn card_subtext" aria-hidden="true">content</span>
                                     <div class="sc-8aeb359-0 hmkyus sc-a4735020-0 gAeinx progress_container">
                                         <div width="100%" class="sc-a723563c-0 eNhTsl progress_bar " aria-hidden="true">
                                             <div role="progressbar" aria-valuenow="38" aria-valuemin="0" aria-valuemax="8000000" class="sc-a723563c-1 jDna-Dw current_progress_bar"></div>
                                         </div>
                                         <div class="sc-8aeb359-0 bVzSkM sc-a4735020-1 cXseVP progress_info">
-                                                    <span color="black" class="sc-8aeb359-0 hFOIQn sc-5dc55ca7-0 lfuBQu txt_num txt_current">3,038,207
+                                                    <span color="black" class="sc-8aeb359-0 hFOIQn sc-5dc55ca7-0 lfuBQu txt_num txt_current">currentMoney
                                                         <!-- -->
                                                     원</span>
-                                            <span color="#ff4050" class="sc-8aeb359-0 hFOIQn sc-5dc55ca7-0 jnITAx txt_num">38
-                                                <!-- -->
-                                                    %</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="sc-e3e47cd7-0 cenffs content_card ">
-                            <a class="sc-e3e47cd7-1 fcWMWm card_inner" aria-label="열두 살 찬희의 눈물 EBS나눔0700 위원회 1,830,199원 모금중" href="https://together.kakao.com/fundraisings/110952">
-                                <div src="https://mud-kage.kakaocdn.net/dn/pWYlY/btswpWGzluP/3NHkrnDRD7bk9HjpSvyuok/c1400x960.jpg" class="sc-e3e47cd7-2 bjvOkQ thumbnail"></div>
-                                <div class="sc-e3e47cd7-3 dHFjfg card_content">
-                                    <strong color="black" class="sc-5dc55ca7-0 sc-e3e47cd7-4 bDRHrZ ijTmKa card_title" aria-hidden="true">열두 살 찬희의 눈물</strong>
-                                    <span color="gray60" class="sc-5dc55ca7-0 sc-e3e47cd7-5 jSqJeI gEAlPn card_subtext" aria-hidden="true">EBS나눔0700 위원회</span>
-                                    <div class="sc-8aeb359-0 hmkyus sc-a4735020-0 gAeinx progress_container">
-                                        <div width="100%" class="sc-a723563c-0 eNhTsl progress_bar " aria-hidden="true">
-                                            <div role="progressbar" aria-valuenow="23" aria-valuemin="0" aria-valuemax="8000000" class="sc-a723563c-1 cmwhte current_progress_bar"></div>
-                                        </div>
-                                        <div class="sc-8aeb359-0 bVzSkM sc-a4735020-1 cXseVP progress_info">
-                                                    <span color="black" class="sc-8aeb359-0 hFOIQn sc-5dc55ca7-0 lfuBQu txt_num txt_current">1,830,199
-                                                        <!-- -->
-                                                    원</span>
-                                            <span color="#ff4050" class="sc-8aeb359-0 hFOIQn sc-5dc55ca7-0 jnITAx txt_num">23
-                                                <!-- -->
-                                                    %</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="sc-e3e47cd7-0 cenffs content_card ">
-                            <a class="sc-e3e47cd7-1 fcWMWm card_inner" aria-label="어느 날 갑자기 쓰러져 버린 엄마 EBS나눔0700 위원회 1,311,300원 모금중" href="https://together.kakao.com/fundraisings/111084">
-                                <div src="https://mud-kage.kakaocdn.net/dn/bkcnls/btsx3Nnsjz1/4omcjVFVZVy8ah0FkFB42k/c1400x960.jpg" class="sc-e3e47cd7-2 iscCRc thumbnail"></div>
-                                <div class="sc-e3e47cd7-3 dHFjfg card_content">
-                                    <strong color="black" class="sc-5dc55ca7-0 sc-e3e47cd7-4 bDRHrZ ijTmKa card_title" aria-hidden="true">어느 날 갑자기 쓰러져 버린 엄마</strong>
-                                    <span color="gray60" class="sc-5dc55ca7-0 sc-e3e47cd7-5 jSqJeI gEAlPn card_subtext" aria-hidden="true">EBS나눔0700 위원회</span>
-                                    <div class="sc-8aeb359-0 hmkyus sc-a4735020-0 gAeinx progress_container">
-                                        <div width="100%" class="sc-a723563c-0 eNhTsl progress_bar " aria-hidden="true">
-                                            <div role="progressbar" aria-valuenow="17" aria-valuemin="0" aria-valuemax="8000000" class="sc-a723563c-1 fBWeHJ current_progress_bar"></div>
-                                        </div>
-                                        <div class="sc-8aeb359-0 bVzSkM sc-a4735020-1 cXseVP progress_info">
-                                                    <span color="black" class="sc-8aeb359-0 hFOIQn sc-5dc55ca7-0 lfuBQu txt_num txt_current">1,311,300
-                                                        <!-- -->
-                                                    원</span>
-                                            <span color="#ff4050" class="sc-8aeb359-0 hFOIQn sc-5dc55ca7-0 jnITAx txt_num">17
+                                            <span color="#ff4050" class="sc-8aeb359-0 hFOIQn sc-5dc55ca7-0 jnITAx txt_num">percentage
                                                 <!-- -->
                                                     %</span>
                                         </div>
@@ -566,6 +141,7 @@
                         </div>
                     </div>
                 </div>
+
             </section>
             <section class="sc-8aeb359-0 hFOIQn sc-89adf84f-0 sc-9999e5bb-0 hUjAiC jDpreK">
                 <div class="sc-8aeb359-0 hFOIQn sc-2213fc82-0 gwUnUq">
@@ -577,9 +153,7 @@
                                         </span>
                             </a>
                         </h4>
-                        <p size="13" color="gray60" role="text" class="sc-8aeb359-0 uaBry sc-5dc55ca7-0 sc-3af8a8c-2 knmjDM exXRwy">2023.10.16
-                            <!-- -->
-                            기준</p>
+                        <p size="13" color="gray60" role="text" class="sc-8aeb359-0 uaBry sc-5dc55ca7-0 sc-3af8a8c-2 knmjDM exXRwy">2023.10.16 기준</p>
                         <div class="sc-3af8a8c-3 keSFDk"></div>
                         <div>
                             <a draggable="false" class="sc-7924a6a8-0 hLSWWl external_hyperlink sc-3af8a8c-8 uyijK" href="https://together.kakao.com/auroville/statistics">
@@ -593,130 +167,14 @@
                             </a>
                         </div>
                     </div>
-                    <div class="sc-8aeb359-0 jigNVS sc-fe20312-1 cDYtHE">
-                        <div>
-                            <a draggable="false" class="sc-7924a6a8-0 hLSWWl external_hyperlink " href="https://together.kakao.com/fundraisings/epilogue">
-                                <h4 size="13" color="gray60" class="sc-8aeb359-0 hFOIQn sc-5dc55ca7-0 sc-fe20312-0 knmjDM jGEGqf">따뜻한 후기</h4>
-                            </a>
-                        </div>
-                        <div class="sc-dc52c688-0 doyorn">
-                            <div class="slider-container" style="position:relative">
-                                <div aria-live="off" aria-atomic="true" style="position:absolute;width:1px;height:1px;overflow:hidden;padding:0;margin:-1px;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" tabindex="-1">Slide 1 of 3</div>
-                                <div style="align-items:flex-end;justify-content:flex-end;position:absolute;display:flex;z-index:1;top:0;left:0;bottom:0;right:0;pointer-events:none">
-                                    <div class="slider-control-bottomright" style="pointer-events:auto">
-                                        <ul class="list_paging">
-                                            <li class="active">
-                                                <button type="button" color="black" class="sc-e7c24948-0 cUZlJm button " aria-label="슬라이드 1/3" aria-current="true"></button>
-                                            </li>
-                                            <li>
-                                                <button type="button" color="black" class="sc-e7c24948-0 cUZlJm button " aria-label="슬라이드 2/3" aria-current="false"></button>
-                                            </li>
-                                            <li>
-                                                <button type="button" color="black" class="sc-e7c24948-0 cUZlJm button " aria-label="슬라이드 3/3" aria-current="false"></button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="slider-frame" style="overflow:hidden;width:100%;position:relative;outline:none;touch-action:pan-y;height:auto;transition:height 300ms ease-in-out;will-change:height;user-select:none" aria-label="따뜻한 후기 슬라이드" role="region" tabindex="-1">
-                                    <div class="slider-list" style="width:900%;text-align:left;user-select:auto;transform:translateX(calc(-33.333333333333336% - 0px));display:flex">
-                                        <div class="slide slide-current prev-cloned slide-visible" style="width:11.11111111111111%;height:auto;padding:0 0px;opacity:1">
-                                            <a draggable="false" class="sc-7924a6a8-0 hLSWWl external_hyperlink " href="https://together.kakao.com/fundraisings/106499/news">
-                                                <div class="sc-8aeb359-0 hFOIQn">
-                                                    <strong size="17" color="gray80" class="sc-8aeb359-0 MVJsN sc-5dc55ca7-0 sc-b28e8364-0 dzrcPl dRJPvC">여름철 우리 집을 지켜주는 수호신 제습기</strong>
-                                                    <p size="14" class="sc-8aeb359-0 emKaz sc-5dc55ca7-0 sc-b28e8364-1 jPvkvO gcbSQD">유난히 길었던 2023년 여름, 주거 취약계층에게는 더욱 힘든 한 해였습니다. 반지하 집 벽면은 빗물이 마를 날 없었으며 검은색 곰팡이가 자리를 메웠습니다. 곰팡이는 닦아내도 다시 생기기를 반복하고 벽지는 제자리를 잃은 것 마냥 벽에서 멀어지기도 합니다. 제습제와 신문지</p>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="slide prev-cloned slide-visible" style="width:11.11111111111111%;height:auto;padding:0 0px;opacity:1">
-                                            <a draggable="false" class="sc-7924a6a8-0 hLSWWl external_hyperlink " href="https://together.kakao.com/fundraisings/103518/news">
-                                                <div class="sc-8aeb359-0 hFOIQn">
-                                                    <strong size="17" color="gray80" class="sc-8aeb359-0 MVJsN sc-5dc55ca7-0 sc-b28e8364-0 dzrcPl dRJPvC">삼성동 독거 어르신들께 전기 밥솥을 전달해 드렸습니다</strong>
-                                                    <p size="14" class="sc-8aeb359-0 emKaz sc-5dc55ca7-0 sc-b28e8364-1 jPvkvO gcbSQD">독거 어르신들의 전기밥솥은 대부분 10년 이상 장기간 사용품으로 제품 성능이 저하되어 취사 기능이 미약합니다. 마땅한 수입이 없는 어르신들은 새 것 구입이 부담되어 오래된 밥솥을 그대로 사용하셨습니다. 이로 인해 식생활에 어려움을 겪거나 안전상 문제를 겪기도 합니다.
-
-                                                    </p>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="slide prev-cloned slide-visible" style="width:11.11111111111111%;height:auto;padding:0 0px;opacity:1">
-                                            <a draggable="false" class="sc-7924a6a8-0 hLSWWl external_hyperlink " href="https://together.kakao.com/fundraisings/104471/news">
-                                                <div class="sc-8aeb359-0 hFOIQn">
-                                                    <strong size="17" color="gray80" class="sc-8aeb359-0 MVJsN sc-5dc55ca7-0 sc-b28e8364-0 dzrcPl dRJPvC">올해 교육영화 읽기와 교육영화제는 더 반짝였습니다</strong>
-                                                    <p size="14" class="sc-8aeb359-0 emKaz sc-5dc55ca7-0 sc-b28e8364-1 jPvkvO gcbSQD">안녕하세요! 기부자님의 소중한 손길, 카카오같이가치와 바보의나눔의 지원에 감사합니다. 덕분에 마을과 함께하는 교육영화 읽기(시즌2)와 제5회 교육영화제를 성료했습니다.
-
-                                                        올해 &#x27;마을과 함께하는 교육영화 읽기 &#x27;는 서울시의회의 예산 전액 삭감으로 지원금이 대폭 줄어들었고,</p>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="slide slide-current slide-visible" style="width:11.11111111111111%;height:auto;padding:0 0px;opacity:1">
-                                            <a draggable="false" class="sc-7924a6a8-0 hLSWWl external_hyperlink " href="https://together.kakao.com/fundraisings/106499/news">
-                                                <div class="sc-8aeb359-0 hFOIQn">
-                                                    <strong size="17" color="gray80" class="sc-8aeb359-0 MVJsN sc-5dc55ca7-0 sc-b28e8364-0 dzrcPl dRJPvC">여름철 우리 집을 지켜주는 수호신 제습기</strong>
-                                                    <p size="14" class="sc-8aeb359-0 emKaz sc-5dc55ca7-0 sc-b28e8364-1 jPvkvO gcbSQD">유난히 길었던 2023년 여름, 주거 취약계층에게는 더욱 힘든 한 해였습니다. 반지하 집 벽면은 빗물이 마를 날 없었으며 검은색 곰팡이가 자리를 메웠습니다. 곰팡이는 닦아내도 다시 생기기를 반복하고 벽지는 제자리를 잃은 것 마냥 벽에서 멀어지기도 합니다. 제습제와 신문지</p>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="slide slide-visible" style="width:11.11111111111111%;height:auto;padding:0 0px;opacity:1">
-                                            <a draggable="false" class="sc-7924a6a8-0 hLSWWl external_hyperlink " href="https://together.kakao.com/fundraisings/103518/news">
-                                                <div class="sc-8aeb359-0 hFOIQn">
-                                                    <strong size="17" color="gray80" class="sc-8aeb359-0 MVJsN sc-5dc55ca7-0 sc-b28e8364-0 dzrcPl dRJPvC">삼성동 독거 어르신들께 전기 밥솥을 전달해 드렸습니다</strong>
-                                                    <p size="14" class="sc-8aeb359-0 emKaz sc-5dc55ca7-0 sc-b28e8364-1 jPvkvO gcbSQD">독거 어르신들의 전기밥솥은 대부분 10년 이상 장기간 사용품으로 제품 성능이 저하되어 취사 기능이 미약합니다. 마땅한 수입이 없는 어르신들은 새 것 구입이 부담되어 오래된 밥솥을 그대로 사용하셨습니다. 이로 인해 식생활에 어려움을 겪거나 안전상 문제를 겪기도 합니다.
-
-                                                    </p>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="slide slide-visible" style="width:11.11111111111111%;height:auto;padding:0 0px;opacity:1">
-                                            <a draggable="false" class="sc-7924a6a8-0 hLSWWl external_hyperlink " href="https://together.kakao.com/fundraisings/104471/news">
-                                                <div class="sc-8aeb359-0 hFOIQn">
-                                                    <strong size="17" color="gray80" class="sc-8aeb359-0 MVJsN sc-5dc55ca7-0 sc-b28e8364-0 dzrcPl dRJPvC">올해 교육영화 읽기와 교육영화제는 더 반짝였습니다</strong>
-                                                    <p size="14" class="sc-8aeb359-0 emKaz sc-5dc55ca7-0 sc-b28e8364-1 jPvkvO gcbSQD">안녕하세요! 기부자님의 소중한 손길, 카카오같이가치와 바보의나눔의 지원에 감사합니다. 덕분에 마을과 함께하는 교육영화 읽기(시즌2)와 제5회 교육영화제를 성료했습니다.
-
-                                                        올해 &#x27;마을과 함께하는 교육영화 읽기 &#x27;는 서울시의회의 예산 전액 삭감으로 지원금이 대폭 줄어들었고,</p>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="slide slide-current next-cloned slide-visible" style="width:11.11111111111111%;height:auto;padding:0 0px;opacity:1">
-                                            <a draggable="false" class="sc-7924a6a8-0 hLSWWl external_hyperlink " href="https://together.kakao.com/fundraisings/106499/news">
-                                                <div class="sc-8aeb359-0 hFOIQn">
-                                                    <strong size="17" color="gray80" class="sc-8aeb359-0 MVJsN sc-5dc55ca7-0 sc-b28e8364-0 dzrcPl dRJPvC">여름철 우리 집을 지켜주는 수호신 제습기</strong>
-                                                    <p size="14" class="sc-8aeb359-0 emKaz sc-5dc55ca7-0 sc-b28e8364-1 jPvkvO gcbSQD">유난히 길었던 2023년 여름, 주거 취약계층에게는 더욱 힘든 한 해였습니다. 반지하 집 벽면은 빗물이 마를 날 없었으며 검은색 곰팡이가 자리를 메웠습니다. 곰팡이는 닦아내도 다시 생기기를 반복하고 벽지는 제자리를 잃은 것 마냥 벽에서 멀어지기도 합니다. 제습제와 신문지</p>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="slide next-cloned slide-visible" style="width:11.11111111111111%;height:auto;padding:0 0px;opacity:1">
-                                            <a draggable="false" class="sc-7924a6a8-0 hLSWWl external_hyperlink " href="https://together.kakao.com/fundraisings/103518/news">
-                                                <div class="sc-8aeb359-0 hFOIQn">
-                                                    <strong size="17" color="gray80" class="sc-8aeb359-0 MVJsN sc-5dc55ca7-0 sc-b28e8364-0 dzrcPl dRJPvC">삼성동 독거 어르신들께 전기 밥솥을 전달해 드렸습니다</strong>
-                                                    <p size="14" class="sc-8aeb359-0 emKaz sc-5dc55ca7-0 sc-b28e8364-1 jPvkvO gcbSQD">독거 어르신들의 전기밥솥은 대부분 10년 이상 장기간 사용품으로 제품 성능이 저하되어 취사 기능이 미약합니다. 마땅한 수입이 없는 어르신들은 새 것 구입이 부담되어 오래된 밥솥을 그대로 사용하셨습니다. 이로 인해 식생활에 어려움을 겪거나 안전상 문제를 겪기도 합니다.
-
-                                                    </p>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="slide next-cloned slide-visible" style="width:11.11111111111111%;height:auto;padding:0 0px;opacity:1">
-                                            <a draggable="false" class="sc-7924a6a8-0 hLSWWl external_hyperlink " href="https://together.kakao.com/fundraisings/104471/news">
-                                                <div class="sc-8aeb359-0 hFOIQn">
-                                                    <strong size="17" color="gray80" class="sc-8aeb359-0 MVJsN sc-5dc55ca7-0 sc-b28e8364-0 dzrcPl dRJPvC">올해 교육영화 읽기와 교육영화제는 더 반짝였습니다</strong>
-                                                    <p size="14" class="sc-8aeb359-0 emKaz sc-5dc55ca7-0 sc-b28e8364-1 jPvkvO gcbSQD">안녕하세요! 기부자님의 소중한 손길, 카카오같이가치와 바보의나눔의 지원에 감사합니다. 덕분에 마을과 함께하는 교육영화 읽기(시즌2)와 제5회 교육영화제를 성료했습니다.
-
-                                                        올해 &#x27;마을과 함께하는 교육영화 읽기 &#x27;는 서울시의회의 예산 전액 삭감으로 지원금이 대폭 줄어들었고,</p>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
+
                 <div class="sc-8aeb359-0 Cfhkw sc-2e8bb184-0 dA-dVsB">
                     <h4 class="sc-8aeb359-0 hFOIQn">
-                        <a draggable="false" class="sc-7924a6a8-0 hLSWWl external_hyperlink " aria-label="마음날씨, 오늘 당신의 마음을 응원해요" href="https://together.kakao.com/hello">
                             <div aria-hidden="true">
-                                <em size="13" color="gray60" class="sc-8aeb359-0 hFOIQn sc-5dc55ca7-0 sc-2e8bb184-1 knmjDM ioeGop">마음날씨</em>
+                                <em size="13" color="gray60" class="sc-8aeb359-0 hFOIQn sc-5dc55ca7-0 sc-2e8bb184-1 knmjDM ioeGop">후원랭킹</em>
                                 <strong size="20" color="black" class="sc-8aeb359-0 kpqLJq sc-5dc55ca7-0 sc-2e8bb184-2 bQybqF jWiGgS">오늘 당신의 마음을 응원해요</strong>
                             </div>
-                        </a>
                     </h4>
                     <ul class="sc-7aaee6b6-1 lapLYi sc-2e8bb184-3 eLKPaa">
                         <li class="sc-7aaee6b6-2 kVuRqu undefined">
@@ -725,105 +183,29 @@
                                     <img src="https://mud-kage.kakaocdn.net/dn/dBRBBz/btq0Q503PVR/WF6pnWVkR1W5UmmyLBUogk/img.png?type=thumb&amp;opt=S500x500" alt="" class="sc-8213ab33-0 bliNZt"/>
                                 </div>
                                 <div class="sc-8aeb359-0 iMPEjg sc-62b84b5-2 jidFAG">
-                                    <strong size="15" color="gray80" class="sc-8aeb359-0 hFOIQn sc-5dc55ca7-0 sc-62b84b5-3 bmAClE kZiCFE">나의 식습관 알아보기</strong>
-                                    <p size="13" color="gray60" class="sc-8aeb359-0 iMIPXi sc-5dc55ca7-0 dxCqHr">54,920
-                                        <!-- -->
-                                        명 참여</p>
+                                    <strong size="15" color="gray80" class="sc-8aeb359-0 hFOIQn sc-5dc55ca7-0 sc-62b84b5-3 bmAClE kZiCFE">userId</strong>
+                                    <p size="13" color="gray60" class="sc-8aeb359-0 iMIPXi sc-5dc55ca7-0 dxCqHr">?원</p>
                                 </div>
                             </a>
                         </li>
+
                         <li class="sc-7aaee6b6-2 kVuRqu undefined">
-                            <a draggable="false" class="sc-7924a6a8-0 hLSWWl external_hyperlink sc-62b84b5-1 eKNonz" href="https://together.kakao.com/hello/46">
+                            <a draggable="false" class="sc-7924a6a8-0 hLSWWl external_hyperlink sc-62b84b5-1 eKNonz" href="https://together.kakao.com/hello/45">
                                 <div class="sc-988ad92b-0 tssaI sc-62b84b5-0 bsEbuO">
-                                    <img src="https://mud-kage.kakaocdn.net/dn/bNN9fS/btq226D2Vg7/Bg1Q3YyKJKeraekXjGDxK1/img.png?type=thumb&amp;opt=S500x500" alt="" class="sc-8213ab33-0 bliNZt"/>
+                                    <img src="https://mud-kage.kakaocdn.net/dn/dBRBBz/btq0Q503PVR/WF6pnWVkR1W5UmmyLBUogk/img.png?type=thumb&amp;opt=S500x500" alt="" class="sc-8213ab33-0 bliNZt"/>
                                 </div>
                                 <div class="sc-8aeb359-0 iMPEjg sc-62b84b5-2 jidFAG">
-                                    <strong size="15" color="gray80" class="sc-8aeb359-0 hFOIQn sc-5dc55ca7-0 sc-62b84b5-3 bmAClE kZiCFE">나의 행복소비 유형</strong>
-                                    <p size="13" color="gray60" class="sc-8aeb359-0 iMIPXi sc-5dc55ca7-0 dxCqHr">40,618
-                                        <!-- -->
-                                        명 참여</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="sc-7aaee6b6-2 kVuRqu undefined">
-                            <a draggable="false" class="sc-7924a6a8-0 hLSWWl external_hyperlink sc-97ff12b8-3 unwkT" href="https://together.kakao.com/mind/157">
-                                <div class="sc-988ad92b-0 tssaI sc-97ff12b8-0 dnCras">
-                                    <img src="https://mud-kage.kakaocdn.net/dn/btGyOB/btqiePNQY3L/wQtsdZwkQTSELUEKitxS21/img.jpg?type=thumb&amp;opt=S500x500" alt="" class="sc-8213ab33-0 bliNZt"/>
-                                    <i class="sc-97ff12b8-1 dZrSpE">
-                                        <span class="sc-695c2ba5-0 WfZZU">영상이 포함된 콘텐츠</span>
-                                    </i>
-                                </div>
-                                <div class="sc-8aeb359-0 iMPEjg sc-97ff12b8-4 eomwvq">
-                                    <strong size="15" color="gray80" class="sc-8aeb359-0 hFOIQn sc-5dc55ca7-0 sc-97ff12b8-5 bmAClE vqXWw">멀리 부서지는 바다</strong>
-                                    <p size="13" color="gray60" class="sc-8aeb359-0 iMIPXi sc-5dc55ca7-0 sc-97ff12b8-2 dxCqHr hcnqmX">79,944
-                                        <!-- -->
-                                        명 재생</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="sc-7aaee6b6-2 kVuRqu undefined">
-                            <a draggable="false" class="sc-7924a6a8-0 hLSWWl external_hyperlink sc-97ff12b8-3 unwkT" href="https://together.kakao.com/mind/160">
-                                <div class="sc-988ad92b-0 tssaI sc-97ff12b8-0 dnCras">
-                                    <img src="https://mud-kage.kakaocdn.net/dn/GxnSW/btqiclnfa7N/KdRYSPLs24mO2wEzGMygQ0/img.jpg?type=thumb&amp;opt=S500x500" alt="" class="sc-8213ab33-0 bliNZt"/>
-                                    <i class="sc-97ff12b8-1 dZrSpE">
-                                        <span class="sc-695c2ba5-0 WfZZU">영상이 포함된 콘텐츠</span>
-                                    </i>
-                                </div>
-                                <div class="sc-8aeb359-0 iMPEjg sc-97ff12b8-4 eomwvq">
-                                    <strong size="15" color="gray80" class="sc-8aeb359-0 hFOIQn sc-5dc55ca7-0 sc-97ff12b8-5 bmAClE vqXWw">저멀리
-                                        천둥과 만난 빗소리</strong>
-                                    <p size="13" color="gray60" class="sc-8aeb359-0 iMIPXi sc-5dc55ca7-0 sc-97ff12b8-2 dxCqHr hcnqmX">247,427
-                                        <!-- -->
-                                        명 재생</p>
+                                    <strong size="15" color="gray80" class="sc-8aeb359-0 hFOIQn sc-5dc55ca7-0 sc-62b84b5-3 bmAClE kZiCFE">userId</strong>
+                                    <p size="13" color="gray60" class="sc-8aeb359-0 iMIPXi sc-5dc55ca7-0 dxCqHr">?원</p>
                                 </div>
                             </a>
                         </li>
                     </ul>
                 </div>
-                <div class="sc-8aeb359-0 jEBau sc-e0fcbb07-0 cZKgFa">
-                    <h4 size="13" color="gray60" class="sc-8aeb359-0 hFOIQn sc-5dc55ca7-0 sc-e0fcbb07-1 knmjDM cojjE">같이가치 NOW</h4>
-                    <strong size="20" color="black" class="sc-8aeb359-0 FVEFe sc-5dc55ca7-0 sc-e0fcbb07-2 bQybqF fsLJlv">놓치면 아까운 같이가치 소식</strong>
-                    <ul class="sc-7aaee6b6-1 lapLYi sc-e0fcbb07-3 boZLZd">
-                        <li class="sc-7aaee6b6-2 kVuRqu undefined">
-                            <div class="sc-8aeb359-0 hFOIQn sc-e0fcbb07-6 gjOBCb">
-                                <a draggable="false" class="sc-7924a6a8-0 hLSWWl external_hyperlink " href="https://pf.kakao.com/_NlxcxlM">
-                                    <strong size="15" color="white" class="sc-8aeb359-0 hFOIQn sc-5dc55ca7-0 sc-e0fcbb07-4 hFsqxT jTSbOx">카카오같이가치
-                                        카카오톡 채널을
-                                        추가해보세요! </strong>
-                                    <i class="sc-e0fcbb07-5 hqLMms"></i>
-                                </a>
-                            </div>
-                        </li>
-                        <li class="sc-7aaee6b6-2 kVuRqu undefined">
-                            <div class="sc-8aeb359-0 hFOIQn sc-e0fcbb07-6 fMiokx">
-                                <a draggable="false" class="sc-7924a6a8-0 hLSWWl external_hyperlink " href="https://together.kakao.com/fundraisings/now">
-                                    <strong size="15" color="white" class="sc-8aeb359-0 hFOIQn sc-5dc55ca7-0 sc-e0fcbb07-4 hFsqxT jTSbOx">참여만으로도
-                                        기부에
-                                        참여할 수 있어요!</strong>
-                                    <i class="sc-e0fcbb07-5 hqLMms"></i>
-                                </a>
-                            </div>
-                        </li>
-                        <li class="sc-7aaee6b6-2 kVuRqu undefined">
-                            <div class="sc-8aeb359-0 hFOIQn sc-e0fcbb07-6 fMiokx">
-                                <a draggable="false" class="sc-7924a6a8-0 hLSWWl external_hyperlink " href="https://www.instagram.com/explore/tags/%EB%AA%A8%EB%91%90%EC%9D%98%ED%96%89%EB%8F%99/">
-                                    <strong size="15" color="white" class="sc-8aeb359-0 hFOIQn sc-5dc55ca7-0 sc-e0fcbb07-4 hFsqxT jTSbOx">SNS에서도
-                                        &#x27;모두의행동 &#x27;인증할 수 있어요 📷</strong>
-                                    <i class="sc-e0fcbb07-5 hqLMms"></i>
-                                </a>
-                            </div>
-                        </li>
-                        <li class="sc-7aaee6b6-2 kVuRqu undefined">
-                            <div class="sc-8aeb359-0 hFOIQn sc-e0fcbb07-6 gjOBCb">
-                                <a draggable="false" class="sc-7924a6a8-0 hLSWWl external_hyperlink " href="https://together.kakao.com/notices/1289">
-                                    <strong size="15" color="white" class="sc-8aeb359-0 hFOIQn sc-5dc55ca7-0 sc-e0fcbb07-4 hFsqxT jTSbOx">모금을 제안하고 싶은
-                                        당신을 위한 꿀팁💡</strong>
-                                    <i class="sc-e0fcbb07-5 hqLMms"></i>
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+<!--                <div class="sc-8aeb359-0 jEBau sc-e0fcbb07-0 cZKgFa">-->
+<!--                    <h4 size="13" color="gray60" class="sc-8aeb359-0 hFOIQn sc-5dc55ca7-0 sc-e0fcbb07-1 knmjDM cojjE">같이가치 NOW</h4>-->
+<!--                    <strong size="20" color="black" class="sc-8aeb359-0 FVEFe sc-5dc55ca7-0 sc-e0fcbb07-2 bQybqF fsLJlv">놓치면 아까운 같이가치 소식</strong>-->
+<!--                </div>-->
             </section>
         </div>
     </div>
@@ -833,71 +215,8 @@
         <a href="/" class="sc-593a523c-2 fbyleg">
             <span class="sc-695c2ba5-0 WfZZU">카카오같이가치</span>
         </a>
-        <p color="gray70" class="sc-8aeb359-0 jaRNCM sc-5dc55ca7-0 sc-593a523c-3 fjKKoz dUkUgM">카카오같이가치는 카카오와 카카오임팩트가 함께합니다.</p>
-        <div class="sc-8aeb359-0 hFOIQn sc-593a523c-4 fTogtw">
-            <ul class="sc-7aaee6b6-1 lapLYi sc-b1b2c075-0 gGNhQe">
-                <li class="sc-7aaee6b6-2 kVuRqu undefined sc-eedf5289-0 kFkUlr">
-                    <a draggable="false" target="_blank" class="sc-7924a6a8-0 hLSWWl external_hyperlink " href="https://www.kakaocorp.com/main">
-                        <span color="gray80" class="sc-5dc55ca7-0 sc-8335a7f4-0 bAcmkP kTwgCT item_text">© Kakao Corp.</span>
-                    </a>
-                </li>
-                <li class="sc-7aaee6b6-2 kVuRqu undefined">
-                    <a draggable="false" target="_blank" class="sc-7924a6a8-0 hLSWWl external_hyperlink " href="https://cs.kakao.com/helps?locale=ko&amp;service=72">
-                        <span color="gray80" class="sc-5dc55ca7-0 sc-8335a7f4-0 bAcmkP kTwgCT item_text">고객센터</span>
-                    </a>
-                </li>
-                <li class="sc-7aaee6b6-2 kVuRqu undefined">
-                    <a draggable="false" target="_blank" class="sc-7924a6a8-0 hLSWWl external_hyperlink " href="https://cs.kakao.com/requests?locale=ko&amp;service=72">
-                        <span color="gray80" class="sc-5dc55ca7-0 sc-8335a7f4-0 bAcmkP kTwgCT item_text">문의하기</span>
-                    </a>
-                </li>
-                <li class="sc-7aaee6b6-2 kVuRqu undefined">
-                    <a draggable="false" target="_blank" class="sc-7924a6a8-0 hLSWWl external_hyperlink " href="https://www.kakao.com/policy/terms?type=a&amp;lang=ko">
-                        <span color="gray80" class="sc-5dc55ca7-0 sc-8335a7f4-0 bAcmkP kTwgCT item_text">이용약관</span>
-                    </a>
-                </li>
-                <li class="sc-7aaee6b6-2 kVuRqu undefined">
-                    <a draggable="false" target="_blank" class="sc-7924a6a8-0 hLSWWl external_hyperlink " href="https://www.kakao.com/policy/privacy?type=p&amp;lang=ko">
-                        <span color="gray80" class="sc-5dc55ca7-0 sc-8335a7f4-0 cXuIRY kTwgCT item_text">개인정보처리방침</span>
-                    </a>
-                </li>
-            </ul>
-            <ul class="sc-7aaee6b6-1 lapLYi sc-bb53e9f2-0 cKkCsL">
-                <li class="sc-7aaee6b6-2 kVuRqu undefined">
-                    <a draggable="false" target="_blank" class="sc-7924a6a8-0 hLSWWl external_hyperlink " href="https://pf.kakao.com/_NlxcxlM">
-                                <span color="gray80" class="sc-5dc55ca7-0 sc-8335a7f4-0 bAcmkP kTwgCT item_text">
-                                    <i class="sc-8335a7f4-1 kfKktf"></i>
-                                    <span class="sc-695c2ba5-0 WfZZU">카카오톡</span>
-                                </span>
-                    </a>
-                </li>
-                <li class="sc-7aaee6b6-2 kVuRqu undefined">
-                    <a draggable="false" target="_blank" class="sc-7924a6a8-0 hLSWWl external_hyperlink " href="https://www.facebook.com/kakao.together">
-                                <span color="gray80" class="sc-5dc55ca7-0 sc-8335a7f4-0 bAcmkP kTwgCT item_text">
-                                    <i class="sc-8335a7f4-1 dNJqKK"></i>
-                                    <span class="sc-695c2ba5-0 WfZZU">페이스북</span>
-                                </span>
-                    </a>
-                </li>
-                <li class="sc-7aaee6b6-2 kVuRqu undefined">
-                    <a draggable="false" target="_blank" class="sc-7924a6a8-0 hLSWWl external_hyperlink " href="https://www.instagram.com/together_kakao">
-                                <span color="gray80" class="sc-5dc55ca7-0 sc-8335a7f4-0 bAcmkP kTwgCT item_text">
-                                    <i class="sc-8335a7f4-1 diIxxO"></i>
-                                    <span class="sc-695c2ba5-0 WfZZU">인스타그램</span>
-                                </span>
-                    </a>
-                </li>
-            </ul>
-            <a draggable="false" target="_blank" class="sc-7924a6a8-0 hLSWWl external_hyperlink undefined sc-eedf5289-1 jGtEdH" href="https://www.kakaocorp.com/main">
-                <small color="gray80" class="sc-5dc55ca7-0 jcETWK">© Kakao Corp.</small>
-            </a>
-        </div>
+        <p color="gray70" class="sc-8aeb359-0 jaRNCM sc-5dc55ca7-0 sc-593a523c-3 fjKKoz dUkUgM">해당 사이트는 카카오같이가치의 디자인을 copy하였습니다.</p>
     </div>
 </footer>
-<!--<div class="sc-31465743-0 ianLLK">-->
-<!--    <div style="position:fixed;z-index:9999;top:16px;left:16px;right:16px;bottom:52px;pointer-events:none"></div>-->
-<!--</div>-->
-
 </body>
 </html>
-<!--<style data-styled="" data-styled-version="6.0.7"></style>-->
