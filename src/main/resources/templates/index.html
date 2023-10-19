@@ -3,19 +3,22 @@
 <head>
     <meta charSet="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
     <title>카카오같이가치</title>
+
     <!-- Import CSS-->
-    <link rel="stylesheet" href="assets/css/mainStyle.css">
-    <link rel="stylesheet" href="assets/css/modalStyle.css">
+    <link rel="stylesheet" href="/assets/css/mainStyle.css">
+    <link rel="stylesheet" href="/assets/css/loginModalStyle.css">
 
     <!-- Import Jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
+    <!-- Import JS -->
+    <script src="/assets/js/loginModal.js"></script>
 </head>
 <body>
-
-
 <header id="navigation" class="sc-7d9cc060-0 jUHOXU navigation ">
     <div class="sc-7d9cc060-1 kQXNVt">
         <h1 class="sc-6c591950-0 gcVIDZ">
@@ -43,15 +46,17 @@
                 </li>
             </ul>
         </nav>
+
         <div class="sc-8aebc68d-0 ddTVtd undefined sc-eedf5289-0 kFkUlr" aria-label="유틸메뉴">
             <div class="sc-8aeb359-0 hFOIQn sc-8aebc68d-1 eTFbhS">
-                <a draggable="false"  class="sc-7924a6a8-0 hLSWWl external_hyperlink sc-8aebc68d-4 dksFvB" data-bs-toggle="modal" data-bs-target="#donate/donateModal">
-                    <div class="sc-988ad92b-0 cCFuWc sc-8aebc68d-2 dUktTI">
+                <a draggable="false"  class="sc-7924a6a8-0 hLSWWl external_hyperlink sc-8aebc68d-4 dksFvB" href="/user/login">
+                    <div class="sc-988ad92b-0 cCFuWc sc-8aebc68d-2 dUktTI" id="loginModalOpen">
                         <img src="//t1.kakaocdn.net/together_image/common/avatar/avatar.png" alt="" class="sc-8213ab33-0 bliNZt"/>
                     </div>
                 </a>
             </div>
         </div>
+
         <a href="https://together.kakao.com/search" aria-label="검색" class="sc-7d9cc060-2 cQTNwZ">
             <div aria-hidden="true">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40 40" width="20" height="20" opacity="1" class="sc-62ee9b1b-0 fVkbrr sc-7d9cc060-3 gBeISY">
@@ -202,10 +207,6 @@
                         </li>
                     </ul>
                 </div>
-<!--                <div class="sc-8aeb359-0 jEBau sc-e0fcbb07-0 cZKgFa">-->
-<!--                    <h4 size="13" color="gray60" class="sc-8aeb359-0 hFOIQn sc-5dc55ca7-0 sc-e0fcbb07-1 knmjDM cojjE">같이가치 NOW</h4>-->
-<!--                    <strong size="20" color="black" class="sc-8aeb359-0 FVEFe sc-5dc55ca7-0 sc-e0fcbb07-2 bQybqF fsLJlv">놓치면 아까운 같이가치 소식</strong>-->
-<!--                </div>-->
             </section>
         </div>
     </div>
